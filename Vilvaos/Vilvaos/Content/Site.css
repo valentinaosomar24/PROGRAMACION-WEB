@@ -23,16 +23,36 @@
 }
 
 .inputHeader {
-    width: 18rem !important;
+    width: 18rem;
+    border: none;
+    border-bottom: 2px solid #12DD9C;
+    height: 30px;
+}
+
+.userHeader {
+    font-size: 30px !important;
+    padding-left: 50px !important;
+    color: #12DD9C !important;
+}
+
+.inputHeader::placeholder {
+    color: #12DD9C;
 }
 
 .btnHeader {
     width: 5rem;
+    background-color: #12DD9C !important;
+    border-color: #12DD9C !important;
+}
+
+.redSocial:hover {
+    color: #12DD9C
 }
 
 .redSocial {
     font-size: 30px !important;
     padding-left: 10px;
+    color: black;
 }
 
 .hearder1 {
@@ -83,4 +103,58 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.footerPage {
+    color: #fff;
+    font-size: 15px;
+}
+
+.contentFooter {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.imgFooter {
+    width: 10%;
+}
+
+.redSocialFooter {
+    font-size: 30px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #808080;
+}
+
+.redSocialFooter:hover{
+    color: #fff;
+}
+
+.redesFooter {
+    align-items: center
+}
+
+.redesFooter .redes {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.redesFooter::before,
+.redesFooter::after {
+    opacity: .5;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #808080;
+}
+
+.redesFooter::before {
+    padding-left:10%;
+    width: 30%;
+    height: 2px;
+}
+
+.redesFooter::after {
+    width: 30%;
+    height: 2px;
 }
