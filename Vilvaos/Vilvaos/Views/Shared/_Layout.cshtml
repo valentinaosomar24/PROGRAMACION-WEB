@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-
     <nav class="navbar navbar-light bg-light">
         <div class="hearder1 col-12 d-flex">
             <div class="col-4">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input id="search-input" type="search" placeholder="Buscar..." class="form-control inputHeader" />
+                        <input id="search-input" type="search" placeholder="Buscar..." class="inputHeader" />
                     </div>
                     <button id="search-button" type="button" class="btn btn-primary btnHeader">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -27,9 +25,10 @@
             </div>
             <div class="col-4 logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
             <div class="col-4 infoRedes d-flex">
-                <i class="fa fa-facebook-square redSocial" aria-hidden="true"></i>
-                <i class="fa fa-instagram redSocial" aria-hidden="true"></i>
-                <i class="fa fa-twitter-square redSocial" aria-hidden="true"></i>
+                <a href="https://www.facebook.com/?locale=es_LA"><i class="fa fa-facebook-square redSocial" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram redSocial" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fa fa-twitter-square redSocial" aria-hidden="true"></i></a>
+                <i class="fa fa-user-circle userHeader" aria-hidden="true"></i>
                 <button class="btnLogin" onclick="location.href='@Url.Action("Login", "Home")'">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
             </div>
         </div>
@@ -48,16 +47,46 @@
                 <a href="@Url.Action("Proveedor", "Home")" class="linkheader">Proveedor</a>
             </div>
         </div>
-        
+
     </nav>
 
     <div class="body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Vilvaos Inventories</p>
-        </footer>
     </div>
+
+    <footer class="page-footer bg-dark pt-4 footerPage">
+        <div class="container-fluid text-center text-md-left contentFooter">
+            <div class="d-flex justify-content-center">
+                <img class="imgFooter" src="~/img/vilvaosBackGroundBlack.png"/>
+            </div>
+            <div class=" d-flex justify-content-center redesFooter">
+                <div class="redes mt-4">
+                    <a href="https://www.facebook.com/?locale=es_LA"><i class="fa fa-facebook-square redSocialFooter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram redSocialFooter" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/?lang=es"><i class="fa fa-twitter-square redSocialFooter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-12 d-flex d-flex mt-4 justify-content-around">
+                <div class="col-4">
+                    <h3 class="text-uppercase">VILVAOS INVENTORIES</h3>
+                    <p>En Vilvaos, estamos dedicados a simplificar la gestión de inventarios para tiendas pequeñas. Nuestra pasión es ayudar a las empresas a crecer y prosperar mediante soluciones inteligentes y accesibles.  Nos esforzamos por ser reconocidos por nuestra innovación, facilidad de uso y compromiso con el éxito de nuestros clientes. Únete a nosotros en este viaje hacia la eficiencia y el éxito empresarial.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-4">
+                    <h3 class="text-uppercase">CONTACTANOS</h3>
+                    <ul class="list-unstyled">
+                        <li><b>Tel: </b>7777777</li>
+                        <li><b>Correo: </b>correoEjemplo@gmail.com</li>
+                        <li><b>Direccion: </b>CLL EJM #PLO 10 Bogota Dc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            <p>&copy; @DateTime.Now.Year - Vilvaos Inventories</p>
+        </div>
+    </footer>
 
     @*@Scripts.Render("~/bundles/jquery")*@
     @*@Scripts.Render("~/bundles/bootstrap")*@
