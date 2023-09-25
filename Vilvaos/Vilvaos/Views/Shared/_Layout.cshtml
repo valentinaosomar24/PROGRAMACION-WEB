@@ -13,38 +13,49 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #616DD4; ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
+    <nav class="navbar navbar-light bg-light">
         <div class="hearder1 col-12 d-flex">
             <div class="col-4">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input id="search-input" type="search" id="form1" class="form-control" />
+                        <input id="search-input" type="search" placeholder="Buscar..." class="form-control inputHeader" />
                     </div>
-                    <button id="search-button" type="button" class="btn btn-primary">
+                    <button id="search-button" type="button" class="btn btn-primary btnHeader">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
-            <div class="col-4 logoNav">LOGO</div>
+            <div class="col-4 logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
             <div class="col-4 infoRedes d-flex">
-                <div>a</div>
-                <div>b</div>
-                <div>c</div>
+                <i class="fa fa-facebook-square redSocial" aria-hidden="true"></i>
+                <i class="fa fa-instagram redSocial" aria-hidden="true"></i>
+                <i class="fa fa-twitter-square redSocial" aria-hidden="true"></i>
+                <button class="btnLogin" onclick="location.href='@Url.Action("Login", "Home")'">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
             </div>
+        </div>
 
+        <div class="header2 col-12 d-flex justify-content-around">
+            <div class="col-3 d-flex justify-content-center">
+                <a href="@Url.Action("Index", "Home")" class="linkheader">Inicio</a>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <a href="@Url.Action("Cliente", "Home")" class="linkheader">Cliente</a>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <a href="@Url.Action("Producto", "Home")" class="linkheader">Producto</a>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <a href="@Url.Action("Proveedor", "Home")" class="linkheader">Proveedor</a>
+            </div>
         </div>
         
     </nav>
 
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - Vilvaos Inventories</p>
         </footer>
     </div>
 
