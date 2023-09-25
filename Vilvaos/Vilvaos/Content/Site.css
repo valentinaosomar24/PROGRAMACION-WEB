@@ -7,6 +7,10 @@
     font-size: 15px !important;
 }
 
+.logoNavImg {
+    width: 200px
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: #fff !important;
 }
