@@ -3,8 +3,8 @@
 }
 <link rel="stylesheet" href="~/Content/CSS/Index.css">
 
-<div class="col-12">
-    <div class="col-8">
+<div class="col-12 d-flex carruselInfoPadre">
+    <div class="col-8 carruselInfo">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -25,6 +25,18 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+        </div>
+    </div>
+    <div class="col-4 carruselInfo bg-light">
+        <div class="formInfo">
+            <h1>Contactanos para mas informacion</h1>
+            <input class="inputForm" type="text" placeholder="Nombre..." id="nombre" required>
+            <input class="inputForm" type="text" placeholder="Razon Social..." id="razonsocial" required>
+            <input class="inputForm" type="email" placeholder="Correo..." id="correo" required>
+            <input class="inputForm" type="tel" placeholder="Telefono..." id="telefono">
+            <input class="inputForm" type="text" placeholder="Direccion..." id="direccion">
+            <input class="inputForm" type="text" placeholder="Tipo de Empresa..." id="TipoEmpresa">
+            <input type="submit" value="Enviar">
         </div>
     </div>
 </div>
