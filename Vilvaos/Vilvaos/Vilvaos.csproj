@@ -131,12 +131,17 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS\cliente.css" />
     <Content Include="Content\CSS\Index.css" />
     <Content Include="Content\CSS\login.css" />
+    <Content Include="Content\CSS\producto.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\imgCarrusel1.png" />
+    <Content Include="img\imgCarrusel2.png" />
+    <Content Include="img\imgCarrusel3.png" />
     <Content Include="img\vilvaos.png" />
     <Content Include="img\vilvaosBackGroundBlack.png" />
     <Content Include="img\vilvaosBackGroundWhite.png" />
@@ -154,6 +159,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Script\login.js" />
+    <Content Include="Scripts\Script\producto.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,160 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+}
+
+.btnLogin {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.navbar {
+    font-size: 15px !important;
+}
+
+.logoNavImg {
+    width: 140px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.inputHeader {
+    width: 18rem;
+    border: none;
+    border-bottom: 2px solid #12DD9C;
+    height: 30px;
+}
+
+.userHeader {
+    font-size: 30px !important;
+    padding-left: 50px !important;
+    color: #12DD9C !important;
+}
+
+.inputHeader::placeholder {
+    color: #12DD9C;
+}
+
+.btnHeader {
+    width: 5rem;
+    background-color: #12DD9C !important;
+    border-color: #12DD9C !important;
+}
+
+.redSocial:hover {
+    color: #12DD9C
+}
+
+.redSocial {
+    font-size: 30px !important;
+    padding-left: 10px;
+    color: black;
+}
+
+.hearder1 {
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header2{
+    align-items: center;
+    padding-top: 15px;
+}
+
+.linkheader {
+    color: #48385D;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.linkheader:hover {
+    text-decoration: none;
+    color: #12DD9C;
+}
+
+.logoNav {
+    display: flex;
+    justify-content: center;
+}
+
+.infoRedes {
+    display: flex;
+    justify-content: end;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.footerPage {
+    color: #fff;
+    font-size: 15px;
+}
+
+.contentFooter {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.imgFooter {
+    width: 10%;
+}
+
+.redSocialFooter {
+    font-size: 30px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #808080;
+}
+
+.redSocialFooter:hover{
+    color: #fff;
+}
+
+.redesFooter {
+    align-items: center
+}
+
+.redesFooter .redes {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.redesFooter::before,
+.redesFooter::after {
+    opacity: .5;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #808080;
+}
+
+.redesFooter::before {
+    padding-left:10%;
+    width: 30%;
+    height: 2px;
+}
+
+.redesFooter::after {
+    width: 30%;
+    height: 2px;
+}
