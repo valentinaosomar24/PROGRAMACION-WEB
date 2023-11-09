@@ -1,14 +1,16 @@
 ﻿/*PANTALLA DE INICIO*/
-.btnTablaC {
+
+.btnTablaP {
     font-size: 15px;
 }
 
-.tableClientes {
+.tableProveedores {
     font-size: 15px;
 }
 
-/*PANTALLA DE AGREGAR*/
-.formAgregarCliente {
+/*PANTALLA DE AGREGAR PRODUCTO*/
+
+.formAgregarProveedor {
     background-color: #EEEEEE;
     font-size: 25px;
     border-radius: 15px !important;
@@ -17,7 +19,7 @@
     position: relative;
 }
 
-.formAgregarCliente::before {
+.formAgregarProveedor::before {
     content: "";
     position: absolute;
     top: 0;
@@ -30,14 +32,14 @@
     background-position: bottom;
 }
 
-.formAgregarCliente input {
+.formAgregarProveedor input {
     max-width: 100%;
     border: none;
     border-bottom: 2px solid #12DD9C;
     font-size: 1.5rem !important;
 }
 
-.formAgregarCliente .fa {
+.formAgregarProveedor .fa {
     color: #12DD9C;
 }
 
@@ -55,3 +57,4 @@
     background-color: #fff;
     border-radius: 50%;
 }
+

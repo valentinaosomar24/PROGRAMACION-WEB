@@ -2,6 +2,10 @@
     /*padding-top: 50px;*/
     padding-bottom: 20px;
 }
+.active-link {
+    color: #12DD9C !important;
+    font-size:25px !important;
+}
 
 .btnLogin {
     border: none;
@@ -12,6 +16,8 @@
 
 .navbar {
     font-size: 15px !important;
+    background: linear-gradient(#EEEEEE 70%, #D0D0D0);
+    border-bottom: solid 1px #808080;
 }
 
 .logoNavImg {

@@ -18,7 +18,7 @@
             </label>
         </div>
         <div class="btnAgregarProductodiv">
-            <button class="btnTablaP btn btn-success">Agregar</button>
+            <button class="btnTablaP btn btn-success" onclick="location.href='@Url.Action("AgregarProducto", "Home")'">Agregar</button>
         </div>
     </div>
 
@@ -29,7 +29,9 @@
                     <th scope="col">#</th>
                     <th scope="col">Producto</th>
                     <th scope="col">Cantidad</th>
-                    <th scope="col">Precio</th>
+                    <th scope="col">Precio Compra</th>
+                    <th scope="col">Precio Venta</th>
+                    <th scope="col">Proveedor</th>
                     <th scope="col">Opcion</th>
                 </tr>
             </thead>
@@ -39,6 +41,8 @@
                     <td>Mark</td>
                     <td>13</td>
                     <td>$234224</td>
+                    <td>$240000</td>
+                    <td>Proveedor1</td>
                     <td>
                         <button class="btnTablaP btn btn-info">Actualizar</button>
                         <button class="btnTablaP btn btn-danger">Eliminar</button>
@@ -49,6 +53,8 @@
                     <td>Jacob</td>
                     <td>12</td>
                     <td>$87654</td>
+                    <td>$88000</td>
+                    <td>Proveedor2</td>
                     <td>
                         <button class="btnTablaP btn btn-info">Actualizar</button>
                         <button class="btnTablaP btn btn-danger">Eliminar</button>
@@ -59,6 +65,8 @@
                     <td>the Bird</td>
                     <td>21</td>
                     <td>$17263</td>
+                    <td>$18000</td>
+                    <td>Proveedor1</td>
                     <td>
                         <button class="btnTablaP btn btn-info">Actualizar</button>
                         <button class="btnTablaP btn btn-danger">Eliminar</button>

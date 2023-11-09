@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Cliente";
 }
 <link rel="stylesheet" href="~/Content/Styles/cliente.css">
@@ -7,14 +6,19 @@
 <h2>Clientes</h2>
 
 <div class="container">
+    <div class="col-12 d-flex mb-5 justify-content-end">
+        <button class="btnTablaC btn btn-success" onclick="location.href='@Url.Action("AgregarCliente", "Home")'">Agregar</button>
+    </div>
     <div class="tableClientes">
         <table class="table" id="myTableCliente">
             <thead>
                 <tr class="bg-success">
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Correo Electrónico</th>
-                    <th scope="col">Rol</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Direcccion</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Ciudad</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -22,48 +26,10 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>Usuario 1</td>
-                    <td>usuario1@example.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
                     <td>Usuario 2</td>
-                    <td>usuario2@example.com</td>
-                    <td>Usuario Regular</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Usuario 3</td>
-                    <td>usuario3@example.com</td>
-                    <td>Usuario Regular</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Usuario 4</td>
-                    <td>usuario4@example.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Usuario 5</td>
-                    <td>usuario5@example.com</td>
-                    <td>Usuario Regular</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
                     <td>
                         <button class="btnTablaC btn btn-info">Actualizar</button>
                         <button class="btnTablaC btn btn-danger">Eliminar</button>
@@ -72,48 +38,10 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>Usuario 1</td>
-                    <td>usuario1@example.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
                     <td>Usuario 2</td>
-                    <td>usuario2@example.com</td>
-                    <td>Usuario Regular</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Usuario 3</td>
-                    <td>usuario3@example.com</td>
-                    <td>Usuario Regular</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Usuario 4</td>
-                    <td>usuario4@example.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Usuario 5</td>
-                    <td>usuario5@example.com</td>
-                    <td>Usuario Regular</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
                     <td>
                         <button class="btnTablaC btn btn-info">Actualizar</button>
                         <button class="btnTablaC btn btn-danger">Eliminar</button>
@@ -122,48 +50,154 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>Usuario 1</td>
-                    <td>usuario1@example.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button class="btnTablaC btn btn-info">Actualizar</button>
-                        <button class="btnTablaC btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
                     <td>Usuario 2</td>
-                    <td>usuario2@example.com</td>
-                    <td>Usuario Regular</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
                     <td>
                         <button class="btnTablaC btn btn-info">Actualizar</button>
                         <button class="btnTablaC btn btn-danger">Eliminar</button>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
-                    <td>Usuario 3</td>
-                    <td>usuario3@example.com</td>
-                    <td>Usuario Regular</td>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
                     <td>
                         <button class="btnTablaC btn btn-info">Actualizar</button>
                         <button class="btnTablaC btn btn-danger">Eliminar</button>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">4</th>
-                    <td>Usuario 4</td>
-                    <td>usuario4@example.com</td>
-                    <td>Admin</td>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
                     <td>
                         <button class="btnTablaC btn btn-info">Actualizar</button>
                         <button class="btnTablaC btn btn-danger">Eliminar</button>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">5</th>
-                    <td>Usuario 5</td>
-                    <td>usuario5@example.com</td>
-                    <td>Usuario Regular</td>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
+                    <td>
+                        <button class="btnTablaC btn btn-info">Actualizar</button>
+                        <button class="btnTablaC btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Usuario 1</td>
+                    <td>Usuario 2</td>
+                    <td>usuario1@example.com</td>
+                    <td>7777777</td>
+                    <td>Bogota</td>
                     <td>
                         <button class="btnTablaC btn btn-info">Actualizar</button>
                         <button class="btnTablaC btn btn-danger">Eliminar</button>
