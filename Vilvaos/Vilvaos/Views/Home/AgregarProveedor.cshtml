@@ -1,6 +1,12 @@
 ﻿
 @{
     ViewBag.Title = "AgregarProveedor";
+    if (Session["User"] == null)
+    {
+        <script>
+            window.location.href = "Index";
+        </script>
+    }
 }
 
 <link rel="stylesheet" href="~/Content/Styles/Proveedor.css">
@@ -33,7 +39,7 @@
             <div class="col-5">
                 <input type="text" placeholder="Ciudad" class="form-control" />
             </div>
-        </div> 
+        </div>
         <div class="row align-items-center d-flex justify-content-end mt-3">
             <button class="btnform btn btn-danger" onclick="location.href='@Url.Action("Proveedor", "Home")'">Cancelar</button>
             <button class="btnform btn btn-success">Guardar</button>

@@ -9,3 +9,26 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+
+function IniciarSesion()
+{
+    var user = document.getElementById("correoLogin").value;
+    var psw = document.getElementById("passwordLogin").value;
+    var data = "{'user':'" + user + "','psw':'" + psw + "'}"
+    $.ajax({
+        type: 'POST',
+        url: "IniciarSesion",
+        contentType: "application/json;charset=utf-8",
+        datatype: "json",
+        data:data,
+        success: function (jsondata, stat) {
+            var datos = JSON.parse(jsondata);
+            if (datos != "OK") {
+                alert(datos);
+            } else
+            {
+                window.location.href = "Index";
+            }
+        }
+    });
+}
