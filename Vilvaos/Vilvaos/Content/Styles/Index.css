@@ -58,46 +58,39 @@
     font-size: 20px !important;
 }
 
-/****************************************/
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: #BA68C8
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
 }
 
-.profile-button {
-    background: rgb(99, 39, 120);
-    box-shadow: none;
-    border: none
+/* Estilos para el popup */
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
-    .profile-button:hover {
-        background: #682773
-    }
-
-    .profile-button:focus {
-        background: #682773;
-        box-shadow: none
-    }
-
-    .profile-button:active {
-        background: #682773;
-        box-shadow: none
-    }
-
-.back:hover {
-    color: #682773;
-    cursor: pointer
+.popup .logoinfo{
+    color: #FFEC00;
+    font-size:10rem;
 }
 
-.labels {
-    font-size: 11px
-}
-
-.add-experience:hover {
-    background: #BA68C8;
-    color: #fff;
+/* Estilos para el botón de cierre */
+.close-btn {
     cursor: pointer;
-    border: solid 1px #BA68C8
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
+/****************************************/

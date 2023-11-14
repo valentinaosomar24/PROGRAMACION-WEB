@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Producto";
+    if (Session["User"] == null)
+    {
+        <script>
+            window.location.href = "Index";
+        </script>
+    }
+}
+
+<link rel="stylesheet" href="~/Content/Styles/producto.css">
+
+<h2>Producto</h2>
+
+<div class="container caja1">
+    <div class="formAgregarProducto card mt-5">
+        <h1 class="mb-5 d-flex justify-content-center">@ViewBag.Opcion</h1>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-id-card-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="nombreProd" type="text" placeholder="Nombre" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="cantidadProd" type="number" placeholder="Cantidad" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="PrecioCProd" type="number" placeholder="Precio Compra" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="PrecioVProd" type="number" placeholder="Precio Venta" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="ProveedorProd" type="text" placeholder="Proveedor" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-end mt-3">
+            <button class="btnform btn btn-danger" onclick="location.href='@Url.Action("Producto", "Home")'">Cancelar</button>
+            <button class="btnform btn btn-success" onclick="">@ViewBag.OpcionBtn</button>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Script != null)
+{
+    <script type="text/javascript">
+        @Html.Raw(ViewBag.Script)
+    </script>
+}
+
+<script src="~/Scripts/Script/AgregarActualizarProducto.js"></script>

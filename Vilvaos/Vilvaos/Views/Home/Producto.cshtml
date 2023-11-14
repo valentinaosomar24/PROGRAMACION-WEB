@@ -1,12 +1,17 @@
 ﻿
 @{
     ViewBag.Title = "Producto";
+    if (Session["User"] == null)
+    {
+        <script>
+            window.location.href = "Index";
+        </script>
+    }
 }
 
 <link rel="stylesheet" href="~/Content/Styles/producto.css">
 
 <h2>Producto</h2>
-
 <div class="container">
     <div class="OpcionesProducto mb-5 d-flex justify-content-between">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -18,7 +23,8 @@
             </label>
         </div>
         <div class="btnAgregarProductodiv">
-            <button class="btnTablaP btn btn-success" onclick="location.href='@Url.Action("AgregarProducto", "Home")'">Agregar</button>
+            <button class="btnTablaP btn btn-success" onclick="downloadExcel()">Excel <i class="fa fa-table" aria-hidden="true"></i></button>
+            <button class="btnTablaP btn btn-success" onclick="location.href='@Url.Action("Agregar_ActualizarProducto", "Home", new { Op = 1 })'">Agregar</button>
         </div>
     </div>
 
@@ -35,43 +41,7 @@
                     <th scope="col">Opcion</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>13</td>
-                    <td>$234224</td>
-                    <td>$240000</td>
-                    <td>Proveedor1</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>12</td>
-                    <td>$87654</td>
-                    <td>$88000</td>
-                    <td>Proveedor2</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>the Bird</td>
-                    <td>21</td>
-                    <td>$17263</td>
-                    <td>$18000</td>
-                    <td>Proveedor1</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
+            <tbody id="TablaBodyProduct">
             </tbody>
         </table>
     </div>
@@ -81,4 +51,9 @@
 </div>
 
 <script src="~/Scripts/Script/producto.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+
+
