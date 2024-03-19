@@ -2,77 +2,137 @@
     ViewBag.Title = "Home Page";
 }
 <link rel="stylesheet" href="~/Content/Styles/Index.css">
+<script src="~/Scripts/Script/Index.js"></script>
 
-<div id="carouselControls" class="carousel slide card" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselControls" data-slide-to="1"></li>
-        <li data-target="#carouselControls" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image: url('../../img/imgCarrusel1.png'); ">
-        </div>
-        <div class="carousel-item" style="background-image: url('../../img/imgCarrusel2.png'); ">
-        </div>
-        <div class="carousel-item" style="background-image: url('../../img/imgCarrusel3.png'); ">
-        </div>
-    </div>
+@if (Session["User"] == null)
+{
 
-    <div class="card-img-overlay informacionFormulario d-flex justi">
-        <div class="col-12 d-flex formulario">
-            <div class="col-8 TextSaberMas">
-                <p class="textCarrusel text-white">¿QUIERES SABER MAS DE NOSOTROS?</p>
-                <p class="textCarrusel text-white">Y de como puedes manejar tu inventario</p>
+    <div id="carouselControls" class="carousel slide card" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselControls" data-slide-to="1"></li>
+            <li data-target="#carouselControls" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('../../img/imgCarrusel1.png'); ">
             </div>
-            <div class="col-4 columnaform">
-                <div class="formularioInfo">
-                    <div class="form-group text-center">
-                        <h2 class="h1 textCarrusel text-white">INGRESA TU INFORMACION</h2>
-                        <div class="form-group mt-5">
-                            <input type="text" class="inputInfo" placeholder="Nombre:">
+            <div class="carousel-item" style="background-image: url('../../img/imgCarrusel2.png'); ">
+            </div>
+            <div class="carousel-item" style="background-image: url('../../img/imgCarrusel3.png'); ">
+            </div>
+        </div>
+
+        <div class="card-img-overlay informacionFormulario d-flex justi">
+            <div class="col-12 d-flex formulario">
+                <div class="col-8 TextSaberMas">
+                    <p class="textCarrusel text-white">¿QUIERES SABER MAS DE NOSOTROS?</p>
+                    <p class="textCarrusel text-white">Y de como puedes manejar tu inventario</p>
+                </div>
+                <div class="col-4 columnaform">
+                    <div class="formularioInfo">
+                        <div class="form-group text-center">
+                            <h2 class="h1 textCarrusel text-white">INGRESA TU INFORMACION</h2>
+                            <div class="form-group mt-5">
+                                <input type="text" class="inputInfo" placeholder="Nombre:">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="inputInfo" placeholder="Email:">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="inputInfo" placeholder="Documento:">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="inputInfo" placeholder="Celular:">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="inputInfo" placeholder="Informacion de interes:">
+                            </div>
+                            <input type="submit" value="ENVIAR" class="mt-5 btnEnviarInfo btn btn-success">
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="inputInfo" placeholder="Email:">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="inputInfo" placeholder="Documento:">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="inputInfo" placeholder="Celular:">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="inputInfo" placeholder="Informacion de interes:">
-                        </div>
-                        <input type="submit" value="ENVIAR" class="mt-5 btnEnviarInfo btn btn-success">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="popupOverlay" class="overlay">
-    <div id="popup" class="popup">
-        <i class="fa fa-exclamation-triangle logoinfo" aria-hidden="true"></i>
-        <h1>Para poder entrar a las otras opciones, por favor regístrese o inicie sesión.</h1>
-        <div class="close-btn btn btn-info" onclick="cerrarPopup()">Cerrar</div>
+
+
+    <div id="popupOverlay" class="overlay">
+        <div id="popup" class="popup">
+            <i class="fa fa-exclamation-triangle logoinfo" aria-hidden="true"></i>
+            <h1>Para poder acceder a nuestros servicios,<br /> por favor regístrese o inicie sesión.</h1>
+            <div class="close-btn btn btn-info" onclick="cerrarPopup()">Cerrar</div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            mostrarPopup();
+        });
+
+        function mostrarPopup() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        }
+
+        function cerrarPopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+    </script>
+}
+else
+{
+<div class="vistaUsuarioRegistrado" id="InfoUsuario">
+    <header class="encabezado">
+        <img src="https://dulcecompaniaperu.com/wp-content/uploads/2018/03/itoya-ginza_1.jpg">
+    </header>
+
+    <div class="imagen">
+        <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+    </div>
+
+    <div class="containerUsuario">
+
+        <div class="datosbasicosempresa">
+            <div class="usuario">
+                <h2>DATOS DE LA EMPRESA</h2>
+                <label>Nombre de la empresa: </label>
+                <input id="NombreEmpresa" type="text" readonly>
+                <br>
+                <label>Nit: </label>
+                <input id="NitEmpresa" placeholder="NIT" type="text">
+                <br>
+                <label>Ciudad: </label>
+                <input id="CiudadEmpresa" type="text" value="">
+                <br>
+                <label>Categoria: </label>
+                <input id="CategoriaEmpresa" type="text" placeholder="Categoria de la empresa">
+                <br>
+                <label>Telefono: </label>
+                <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
+                <br>
+                <label>Direccion: </label>
+                <input id="DireccionEmpresa" type="text" placeholder="Direccion de la empresa">
+                <br>
+                <label>Correo: </label>
+                <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
+                <h2>INFORMACION DE LA PERSONA A CARGO</h2>
+                <label class="labels">Nombre: </label>
+                <input id="CargoEmpresa" type="text" placeholder="Nombres y Apellidos">
+                <br>
+
+                <div id="btnIndexForm">
+                    
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
-
-@if (Session["User"] == null)
-{
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        mostrarPopup();
-    });
-
-    function mostrarPopup() {
-        document.getElementById('popupOverlay').style.display = 'flex';
-    }
-
-    function cerrarPopup() {
-        document.getElementById('popupOverlay').style.display = 'none';
-    }
+        MostrarDatos();
 </script>
 }
+
 

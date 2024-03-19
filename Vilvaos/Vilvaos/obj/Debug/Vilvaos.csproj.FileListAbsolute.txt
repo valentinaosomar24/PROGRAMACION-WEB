@@ -79,11 +79,7 @@ C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\Micr
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.AppContext.dll
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\vbc.exe
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\vbc.exe.config
@@ -218,3 +214,11 @@ C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\System.Memo
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\System.Numerics.Vectors.xml
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\csi.exe.config
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Buffers.dll
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Memory.dll
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\kevin\source\repos\Vilvaos\PROYECTO-PIA\Vilvaos\Vilvaos\bin\roslyn\System.Threading.Tasks.Extensions.dll

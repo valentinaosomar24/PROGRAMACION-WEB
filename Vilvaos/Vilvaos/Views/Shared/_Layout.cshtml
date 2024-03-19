@@ -52,7 +52,7 @@
 
         <div class="header2 col-12 d-flex justify-content-around">
             <div class="col-3 d-flex justify-content-center">
-                <a href="@Url.Action("Index", "Home")" class="linkheader @(Request.Url.AbsolutePath == "/" ? "active-link" : "")">Inicio</a>
+                <a href="Index" class="linkheader @(Request.Url.AbsolutePath.Contains("/Index") ? "active-link" : "")">Inicio</a>
             </div>
             <div class="col-3 d-flex justify-content-center">
                 <a href="@Url.Action("Cliente", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Cliente") ? "active-link" : "")">Cliente</a>

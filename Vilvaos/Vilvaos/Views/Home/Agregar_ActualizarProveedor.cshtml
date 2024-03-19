@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "AgregarProveedor";
+    if (Session["User"] == null)
+    {
+        <script>
+            window.location.href = "Index";
+        </script>
+    }
+}
+
+<link rel="stylesheet" href="~/Content/Styles/Proveedor.css">
+
+<h2>Agregar Proveedor</h2>
+<input type="hidden" id="IdProveedorGA" />
+<div class="container caja1">
+    <div class="formAgregarProveedor card mt-5">
+        <h1 class="mb-5 d-flex justify-content-center">@ViewBag.Opcion</h1>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-id-card-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="NombreProveedor" type="text" placeholder="Nombre" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="TelefonoProveedor" type="number" placeholder="Telefono" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-center mb-3">
+            <div class="iconform col-1 text-center">
+                <i class="fa fa-map" aria-hidden="true"></i>
+            </div>
+            <div class="col-5">
+                <input id="CiudadProveedor" type="text" placeholder="Ciudad" class="form-control" />
+            </div>
+        </div>
+        <div class="row align-items-center d-flex justify-content-end mt-3">
+            <button class="btnform btn btn-danger" onclick="location.href='@Url.Action("Proveedor", "Home")'">Cancelar</button>
+            <button class="btnform btn btn-success" onclick="@ViewBag.OpcionAccion">@ViewBag.OpcionBtn</button>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.Script != null)
+{
+    <script type="text/javascript">
+        @Html.Raw(ViewBag.Script)
+    </script>
+}
+
+<script src="~/Scripts/Script/AgregarActualizarProveedor.js"></script>

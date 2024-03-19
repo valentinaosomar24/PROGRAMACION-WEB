@@ -15,10 +15,10 @@
 
 <div class="container">
     <div class="col-12 d-flex mb-5 justify-content-end">
-        <button class="btnTablaP btn btn-success" onclick="location.href='@Url.Action("AgregarProveedor", "Home")'">Agregar</button>
+        <button class="btnTablaP btn btn-success" onclick="location.href='@Url.Action("Agregar_ActualizarProveedor", "Home", new { Op = 1 })'">Agregar</button>
     </div>
     <div class="tableProveedores">
-        <table class="table" id="myTableCliente">
+        <table class="table table-striped" id="myTableCliente">
             <thead>
                 <tr class="bg-success">
                     <th scope="col">#</th>
@@ -28,156 +28,10 @@
                     <th scope="col">Opcion</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">Nombre</td>
-                    <td scope="col">Telefono</td>
-                    <td scope="col">Ciudad</td>
-                    <td>
-                        <button class="btnTablaP btn btn-info">Actualizar</button>
-                        <button class="btnTablaP btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-
+            <tbody id="TablaBodyProveedor">
             </tbody>
         </table>
     </div>
 </div>
 
-<script>
-    $(document).ready(function () {
-        $('#myTableCliente').DataTable({
-            language: {
-                "decimal": "",
-                "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Entradas",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscar:",
-                "zeroRecords": "Sin resultados encontrados",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                }
-            }
-        });
-    });
-</script>
+<script src="~/Scripts/Script/proveedor.js"></script>

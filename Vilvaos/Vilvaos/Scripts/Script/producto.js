@@ -35,7 +35,7 @@
                     "<td>" + datos[i].Proveedor + "</td>" +
                     "<td>" +
                     "<button class='btnTablaP btn btn-info' onclick='redirectToAction("+2+","+ datos[i].IdProducto + ")'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>" +
-                    "<button class='btnTablaP btn btn-danger'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
+                    "<button class='btnTablaP btn btn-danger' onclick='EliminarProducto(" + datos[i].IdProducto+")'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
                     "</td>" +
                     "</tr>";
             }
@@ -189,4 +189,27 @@ function downloadExcel() {
 function redirectToAction(Op, id) {
     var url = '/Home/Agregar_ActualizarProducto?Op=' + Op + '&id=' + id;
     window.location.href = url;
+}
+
+function EliminarProducto(id) {
+    var opcion = confirm("¿Esta seguro de ELIMINAR este producto?");
+    if (opcion == true) {
+        var data = "{'Id':'" + id + "'}"
+        $.ajax({
+            type: 'POST',
+            url: 'EliminarProducto',
+            contentType: "application/json;charset=utf-8",
+            datatype: "json",
+            data: data,
+            success: function (jsondata, stat) {
+                var datos = JSON.parse(jsondata);
+                alert(datos);
+                window.location.href = "Producto";
+            },
+            error: function (error) {
+                alert('Error al eliminar:', error);
+                window.location.href = "Producto";
+            }
+        });
+    }  
 }

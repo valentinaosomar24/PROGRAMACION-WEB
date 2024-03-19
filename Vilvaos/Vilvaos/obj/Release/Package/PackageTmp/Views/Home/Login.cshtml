@@ -6,11 +6,11 @@
 
 <link rel="stylesheet" href="~/Content/Styles/login.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <div class="container" id="container">
     <div class="form-container sing-up-container">
-        <form action="#">
+        <div class="form">
             <h1>Crear cuenta</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -18,26 +18,26 @@
                 <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
             </div>
             <span>Use su email para registrarse</span>
-            <input type="text" placeholder="Nombre" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Contraseña" />
-            <button>Registrate</button>
-        </form>
+            <input id="NombreEm" type="text" placeholder="Nombre Empresa" />
+            <input id="CorreoResgistrar" type="email" placeholder="Email" />
+            <input id="ContraseñaRegistrar" type="password" placeholder="Contraseña" />
+            <button onclick="Registrarse()">Registrarse</button>
+        </div>
     </div>
     <div class="form-container sign-in-container">
-        <form action="#">
+        <div class="form">
             <h1>Iniciar sesión</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#" class="social"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
                 <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
             </div>
-            <span>Ingresa con tu cuenta</ span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Contraseña" />
+            <span>Ingresa con tu cuenta</span>
+            <input id="correoLogin" type="email" placeholder="Email" />
+            <input id="passwordLogin" type="password" placeholder="Contraseña" />
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <button>Iniciar sesión</button>
-        </form>
+            <button onclick="IniciarSesion()">Iniciar sesión</button>
+        </div>
     </div>
     <div class="overlay-container">
         <div class="overlay">
@@ -51,7 +51,7 @@
                 <div class="logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
                 <h1>¡Bienvenido!</h1>
                 <p>Introduzca sus datos personales.</p>
-                <button class="ghost" id="signUp">Iniciar sesión</button>
+                <button class="ghost" id="signUp">Registrarse</button>
             </div>
         </div>
     </div>

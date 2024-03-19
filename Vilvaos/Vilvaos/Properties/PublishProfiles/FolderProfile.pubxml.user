@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\kevin\OneDrive\Documentos\Publicaciones\Vilvaos_20231109</_PublishTargetUrl>
-    <History>True|2023-11-09T05:55:10.1889771Z;True|2023-11-02T21:21:23.3394026-05:00;True|2023-10-26T20:54:20.1706105-05:00;True|2023-10-25T00:03:40.1195102-05:00;</History>
+    <_PublishTargetUrl>C:\Users\kevin\OneDrive\Documentos\Publicaciones\Vilvaos_20231116</_PublishTargetUrl>
+    <History>True|2023-11-16T18:09:43.6804471Z;True|2023-11-14T15:47:08.0359423-05:00;True|2023-11-09T00:55:10.1889771-05:00;True|2023-11-02T21:21:23.3394026-05:00;True|2023-10-26T20:54:20.1706105-05:00;True|2023-10-25T00:03:40.1195102-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -13,6 +13,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
       <publishTime>11/02/2023 20:32:02</publishTime>
+    </File>
+    <File Include="bin/BouncyCastle.Cryptography.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
     </File>
     <File Include="bin/es/System.Web.Helpers.resources.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
@@ -35,11 +38,32 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/es/System.Web.WebPages.resources.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
+    <File Include="bin/Google.Protobuf.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
+    <File Include="bin/Google.Protobuf.pdb">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
+    <File Include="bin/K4os.Compression.LZ4.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
+    <File Include="bin/K4os.Compression.LZ4.Streams.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
+    <File Include="bin/K4os.Hash.xxHash.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
@@ -122,6 +146,30 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
+    <File Include="bin/System.Buffers.dll">
+      <publishTime>11/13/2023 23:15:35</publishTime>
+    </File>
+    <File Include="bin/System.Configuration.ConfigurationManager.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
+    <File Include="bin/System.IO.Pipelines.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
+    <File Include="bin/System.Memory.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
+    <File Include="bin/System.Numerics.Vectors.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
+    </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
@@ -144,13 +192,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
     <File Include="bin/Vilvaos.dll">
-      <publishTime>11/09/2023 00:55:09</publishTime>
+      <publishTime>11/16/2023 13:09:42</publishTime>
     </File>
     <File Include="bin/Vilvaos.pdb">
-      <publishTime>11/09/2023 00:55:09</publishTime>
+      <publishTime>11/16/2023 13:09:42</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>11/02/2023 20:32:02</publishTime>
+    </File>
+    <File Include="bin/ZstdSharp.dll">
+      <publishTime>11/13/2023 23:15:36</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>11/02/2023 20:32:02</publishTime>
@@ -189,22 +240,22 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/21/2023 20:41:07</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>11/09/2023 00:43:58</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="Content/Styles/cliente.css">
-      <publishTime>11/09/2023 00:14:07</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="Content/Styles/Index.css">
-      <publishTime>11/09/2023 00:49:44</publishTime>
+      <publishTime>11/15/2023 13:45:48</publishTime>
     </File>
     <File Include="Content/Styles/login.css">
-      <publishTime>11/02/2023 21:32:12</publishTime>
+      <publishTime>11/15/2023 12:25:53</publishTime>
     </File>
     <File Include="Content/Styles/producto.css">
-      <publishTime>11/08/2023 23:32:45</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="Content/Styles/Proveedor.css">
-      <publishTime>11/09/2023 00:32:16</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>11/02/2023 20:32:02</publishTime>
@@ -284,41 +335,68 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
+    <File Include="Scripts/Script/AgregarActualizarCliente.js">
+      <publishTime>11/15/2023 00:56:24</publishTime>
+    </File>
+    <File Include="Scripts/Script/AgregarActualizarProducto.js">
+      <publishTime>11/14/2023 15:43:44</publishTime>
+    </File>
+    <File Include="Scripts/Script/AgregarActualizarProveedor.js">
+      <publishTime>11/15/2023 01:54:12</publishTime>
+    </File>
+    <File Include="Scripts/Script/cliente.js">
+      <publishTime>11/15/2023 01:16:53</publishTime>
+    </File>
+    <File Include="Scripts/Script/Index.js">
+      <publishTime>11/16/2023 13:07:52</publishTime>
+    </File>
     <File Include="Scripts/Script/login.js">
-      <publishTime>11/02/2023 20:32:02</publishTime>
+      <publishTime>11/16/2023 01:13:50</publishTime>
     </File>
     <File Include="Scripts/Script/producto.js">
-      <publishTime>11/02/2023 20:32:02</publishTime>
+      <publishTime>11/14/2023 15:46:12</publishTime>
+    </File>
+    <File Include="Scripts/Script/proveedor.js">
+      <publishTime>11/15/2023 01:53:11</publishTime>
     </File>
     <File Include="Views/Home/AgregarCliente.cshtml">
-      <publishTime>11/09/2023 00:37:08</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="Views/Home/AgregarProducto.cshtml">
       <publishTime>11/09/2023 00:15:48</publishTime>
     </File>
     <File Include="Views/Home/AgregarProveedor.cshtml">
-      <publishTime>11/09/2023 00:37:22</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
+    </File>
+    <File Include="Views/Home/Agregar_ActualizarCliente.cshtml">
+      <publishTime>11/15/2023 02:12:42</publishTime>
+    </File>
+    <File Include="Views/Home/Agregar_ActualizarProducto.cshtml">
+      <publishTime>11/14/2023 14:40:23</publishTime>
+    </File>
+    <File Include="Views/Home/Agregar_ActualizarProveedor.cshtml">
+      <publishTime>11/15/2023 02:13:03</publishTime>
     </File>
     <File Include="Views/Home/Cliente.cshtml">
-      <publishTime>11/09/2023 00:15:09</publishTime>
+      <publishTime>11/15/2023 01:40:31</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/09/2023 00:48:57</publishTime>
+      <publishTime>11/16/2023 02:18:12</publishTime>
     </File>
     <File Include="Views/Home/Login.cshtml">
-      <publishTime>11/02/2023 21:32:12</publishTime>
+      <publishTime>11/15/2023 12:36:16</publishTime>
     </File>
     <File Include="Views/Home/Producto.cshtml">
-      <publishTime>11/09/2023 00:33:35</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="Views/Home/Proveedor.cshtml">
-      <publishTime>11/09/2023 00:33:58</publishTime>
+      <publishTime>11/15/2023 02:04:48</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/09/2023 00:40:24</publishTime>
+      <publishTime>11/13/2023 23:15:34</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/02/2023 20:32:02</publishTime>
@@ -327,7 +405,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/02/2023 20:32:02</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/02/2023 20:32:02</publishTime>
+      <publishTime>11/14/2023 15:47:07</publishTime>
     </File>
   </ItemGroup>
 </Project>

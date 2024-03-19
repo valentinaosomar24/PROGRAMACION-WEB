@@ -28,5 +28,32 @@ namespace Vilvaos.Models
             }
             return result;
         }
+
+        public string Registrar(string Nombre, string correo, string contraseña)
+        {
+            DataTable result = new DataTable();
+            string sql = (@"INSERT INTO empresa (Nombre,Correo,Pwd) VALUES('"+ Nombre + "','"+ correo + "','"+ contraseña + "')");
+            try
+            {
+                string insertQuery = (@"INSERT INTO empresa (Nombre,Correo,Pwd) VALUES('" + Nombre + "','" + correo + "','" + contraseña + "')");
+
+                using (MySqlConnection connection = new MySqlConnection(Conexion))
+                using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@Nombre", Nombre);
+                    command.Parameters.AddWithValue("@correo", correo);
+                    command.Parameters.AddWithValue("@contraseña", contraseña);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+
+                return "Usuario registrado exitosamente, inicie sesion.";
+            }
+            catch (Exception ex)
+            {
+                return "Error al registrar nuevo usuario: " + ex.Message;
+            }
+        }
     }
 }

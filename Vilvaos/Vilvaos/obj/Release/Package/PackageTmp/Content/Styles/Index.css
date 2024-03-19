@@ -58,46 +58,127 @@
     font-size: 20px !important;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el popup */
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.popup .logoinfo{
+    color: #FF9700;
+    font-size:20rem;
+}
+
+/* Estilos para el botón de cierre */
+.close-btn {
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 /****************************************/
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: #BA68C8
+.encabezado img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 45vh;
+    width: 100%;
+}
+.imagen {
+    margin: 40px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    
 }
 
-.profile-button {
-    background: rgb(99, 39, 120);
-    box-shadow: none;
-    border: none
+.imagen img {
+    max-width: 150px; 
+    border-radius: 100px;
+    
 }
 
-    .profile-button:hover {
-        background: #682773
-    }
+body {   
+    background-color: #dde6e3;
+    margin: 0;
+}
 
-    .profile-button:focus {
-        background: #682773;
-        box-shadow: none
-    }
+.datosbasicosempresa {
+    margin: 100px;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
 
-    .profile-button:active {
-        background: #682773;
-        box-shadow: none
-    }
+.containerUsuario {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 40px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
 
-.back:hover {
-    color: #682773;
-    cursor: pointer
+.usuario {
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    color: #01110c;
+}
+
+label {
+    font-weight: bold;
+}
+
+.usuario input {
+    max-width: 100% !important;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #12DD9C;
+    border-radius: 4px;
 }
 
 .labels {
-    font-size: 11px
+    display: block;
+    margin-top: 10px;
 }
 
-.add-experience:hover {
-    background: #BA68C8;
+.button {
+    background-color: #12DD9C;
     color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border: solid 1px #BA68C8
 }
+
+.button:hover {
+    background-color: #0FAA87;
+}
+
+
+
+
 
