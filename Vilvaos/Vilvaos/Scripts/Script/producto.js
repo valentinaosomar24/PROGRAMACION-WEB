@@ -1,55 +1,55 @@
-﻿$(document).ready(function () {
-    document.getElementById("loader-container").style.display = "flex";
-    $.ajax({
-        type: 'POST',
-        url: "ConsultarProductos",
-        contentType: "application/json;charset=utf-8",
-        datatype: "json",
-        success: function (jsondata, stat) {
-            var datos = JSON.parse(jsondata);
-            var tabla = document.getElementById("TablaBodyProduct");
-            tabla.innerHTML = "";
-            var contenidoTabla = ""; // Variable para acumular el contenido
-            var bg = "";
-            var dato1 = 0;
-            var dato2 = 0;
-            var dato3 = 0;
-            for (var i = 0; i < datos.length; i++) {
-                if (datos[i].Cantidad <= 10) {
-                    bg = "class= 'table-danger'";
-                    dato1 = dato1+1;
-                } else if (datos[i].Cantidad <= 30) {
-                    bg = "class= 'table-warning'";
-                    dato2 = dato2 + 1;
-                } else if (datos[i].Cantidad > 30)
-                {
-                    bg = "class= 'table-success'";
-                    dato3 = dato3 + 1;
-                }
-                contenidoTabla += "<tr "+bg+">" +
-                    "<th scope='row'>" + datos[i].IdProducto + "</th>" +
-                    "<td>" + datos[i].Producto + "</td>" +
-                    "<td>" + datos[i].Cantidad + "</td>" +
-                    "<td>$" + datos[i].PrecioCompra + "</td>" +
-                    "<td>" + datos[i].PrecioVenta + "</td>" +
-                    "<td>" + datos[i].Proveedor + "</td>" +
-                    "<td>" +
-                    "<button class='btnTablaP btn btn-info' onclick='redirectToAction("+2+","+ datos[i].IdProducto + ")'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>" +
-                    "<button class='btnTablaP btn btn-danger' onclick='EliminarProducto(" + datos[i].IdProducto+")'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
-                    "</td>" +
-                    "</tr>";
-            }
-            tabla.innerHTML = contenidoTabla;
+﻿////$(document).ready(function () {
+////    document.getElementById("loader-container").style.display = "flex";
+////    $.ajax({
+////        type: 'POST',
+////        url: "ConsultarProductos",
+////        contentType: "application/json;charset=utf-8",
+////        datatype: "json",
+////        success: function (jsondata, stat) {
+////            var datos = JSON.parse(jsondata);
+////            var tabla = document.getElementById("TablaBodyProduct");
+////            tabla.innerHTML = "";
+////            var contenidoTabla = ""; // Variable para acumular el contenido
+////            var bg = "";
+////            var dato1 = 0;
+////            var dato2 = 0;
+////            var dato3 = 0;
+////            for (var i = 0; i < datos.length; i++) {
+////                if (datos[i].Cantidad <= 10) {
+////                    bg = "class= 'table-danger'";
+////                    dato1 = dato1+1;
+////                } else if (datos[i].Cantidad <= 30) {
+////                    bg = "class= 'table-warning'";
+////                    dato2 = dato2 + 1;
+////                } else if (datos[i].Cantidad > 30)
+////                {
+////                    bg = "class= 'table-success'";
+////                    dato3 = dato3 + 1;
+////                }
+////                contenidoTabla += "<tr "+bg+">" +
+////                    "<th scope='row'>" + datos[i].IdProducto + "</th>" +
+////                    "<td>" + datos[i].Producto + "</td>" +
+////                    "<td>" + datos[i].Cantidad + "</td>" +
+////                    "<td>$" + datos[i].PrecioCompra + "</td>" +
+////                    "<td>" + datos[i].PrecioVenta + "</td>" +
+////                    "<td>" + datos[i].Proveedor + "</td>" +
+////                    "<td>" +
+////                    "<button class='btnTablaP btn btn-info' onclick='redirectToAction("+2+","+ datos[i].IdProducto + ")'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>" +
+////                    "<button class='btnTablaP btn btn-danger' onclick='EliminarProducto(" + datos[i].IdProducto+")'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
+////                    "</td>" +
+////                    "</tr>";
+////            }
+////            tabla.innerHTML = contenidoTabla;
 
-            ManejaFunciones(dato1, dato2, dato3);
-            document.getElementById("loader-container").style.display = "none";
-        },
-        error: function (xhr, status) {
-            alert("Error: " + xhr + "-" + status);
-            document.getElementById("loader-container").style.display = "none";
-        },
-    });
-});
+////            ManejaFunciones(dato1, dato2, dato3);
+////            document.getElementById("loader-container").style.display = "none";
+////        },
+////        error: function (xhr, status) {
+////            alert("Error: " + xhr + "-" + status);
+////            document.getElementById("loader-container").style.display = "none";
+////        },
+////    });
+////});
 
 
 function ManejaFunciones(dato1, dato2, dato3)

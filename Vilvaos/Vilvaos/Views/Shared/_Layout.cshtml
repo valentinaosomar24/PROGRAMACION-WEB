@@ -40,13 +40,13 @@
                 <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram redSocial" aria-hidden="true"></i></a>
                 <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter-square redSocial" aria-hidden="true"></i></a>
                 <i class="fa fa-user-circle userHeader" aria-hidden="true"></i>
-                @{if (Session["User"] == null) {
+                @*@{if (Session["User"] == null) {*@
                         <button class="btnLogin" onclick="location.href='@Url.Action("Login", "Home")'">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                    }
+                    @*}
                     else {
                     <button class="btnLogin" onclick="location.href='@Url.Action("Exit", "Home")'">Salir <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                     }
-                }
+                }*@
             </div>
         </div>
 
