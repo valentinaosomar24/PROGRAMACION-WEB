@@ -32,7 +32,6 @@ namespace Vilvaos.Models
         public string Registrar(string Nombre, string correo, string contraseña)
         {
             DataTable result = new DataTable();
-            string sql = (@"INSERT INTO empresa (Nombre,Correo,Pwd) VALUES('"+ Nombre + "','"+ correo + "','"+ contraseña + "')");
             try
             {
                 string insertQuery = (@"INSERT INTO empresa (Nombre,Correo,Pwd) VALUES('" + Nombre + "','" + correo + "','" + contraseña + "')");

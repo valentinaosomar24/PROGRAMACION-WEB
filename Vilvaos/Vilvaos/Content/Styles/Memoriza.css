@@ -1,0 +1,29 @@
+﻿.cuadro {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(21.25rem, calc(50% - 10px)), 1fr));
+    grid-gap: 10px;
+}
+
+.carta {
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    height: 12rem;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../img/vilvaosBackGroundBlack.png');
+}
+
+.carta.logo {
+    background-size: 65% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.carta.flip {
+    background-image: none;
+}
+
+.imgGanador {
+    width: 80%;
+}

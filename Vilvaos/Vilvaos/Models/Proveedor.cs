@@ -15,8 +15,10 @@ namespace Vilvaos.Models
 
         public DataTable ConsultaProveedores()
         {
+            DataTable tabla = (DataTable)HttpContext.Current.Session["User"];
+            string IdEmpresa = tabla.Rows[0]["IdEmpresa"].ToString();
             DataTable result = new DataTable();
-            string sql = (@"SELECT * from proveedor");
+            string sql = (@"SELECT * from proveedor where IdEmpresa = "+IdEmpresa);
             try
             {
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, Conexion);
@@ -49,10 +51,12 @@ namespace Vilvaos.Models
 
         public string GuardarProveedor(string NombreProveedor, string TelefonoProveedor, string CiudadProveedor)
         {
+            DataTable tabla = (DataTable)HttpContext.Current.Session["User"];
+            string IdEmpresa = tabla.Rows[0]["IdEmpresa"].ToString();
             try
             {
-                string insertQuery = "INSERT INTO proveedor (Nombre, Telefono, Ciudad) " +
-                                     "VALUES ('" + NombreProveedor + "', " + TelefonoProveedor + ", '" + CiudadProveedor+ "')";
+                string insertQuery = "INSERT INTO proveedor (Nombre, Telefono, Ciudad, IdEmpresa) " +
+                                     "VALUES ('" + NombreProveedor + "', " + TelefonoProveedor + ", '" + CiudadProveedor+ "',"+ IdEmpresa + ")";
 
                 using (MySqlConnection connection = new MySqlConnection(Conexion))
                 using (MySqlCommand command = new MySqlCommand(insertQuery, connection))

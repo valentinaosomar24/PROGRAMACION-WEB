@@ -15,8 +15,10 @@ namespace Vilvaos.Models
 
         public DataTable ConsultaProductos() 
         {
+            DataTable tabla = (DataTable)HttpContext.Current.Session["User"];
+            string IdEmpresa = tabla.Rows[0]["IdEmpresa"].ToString();
             DataTable result = new DataTable();
-            string sql = (@"SELECT p.*, pr.Nombre as Proveedor FROM producto p, proveedor pr where p.IdProveedor = pr.IdProveedor;");
+            string sql = (@"SELECT p.*, pr.Nombre as Proveedor FROM producto p, proveedor pr where p.IdProveedor = pr.IdProveedor and p.IdEmpresa = " + IdEmpresa);
             try
             {
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, Conexion);
@@ -49,10 +51,12 @@ namespace Vilvaos.Models
 
         public string GuardarProducto(string Nombre, string Cantidad, string PrecioC, string PrecioV, string IdProveedor)
         {
+            DataTable tabla = (DataTable)HttpContext.Current.Session["User"];
+            string IdEmpresa = tabla.Rows[0]["IdEmpresa"].ToString();
             try
             {
-                string insertQuery = "INSERT INTO producto (Producto, Cantidad, PrecioCompra, PrecioVenta, IdProveedor) " +
-                                     "VALUES ('"+Nombre+"', "+Cantidad+", "+PrecioC+", "+PrecioV+", "+IdProveedor+")";
+                string insertQuery = "INSERT INTO producto (Producto, Cantidad, PrecioCompra, PrecioVenta, IdProveedor, IdEmpresa) " +
+                                     "VALUES ('"+Nombre+"', "+Cantidad+", "+PrecioC+", "+PrecioV+", "+IdProveedor+","+ IdEmpresa + ")";
 
                 using (MySqlConnection connection = new MySqlConnection(Conexion))
                 using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
@@ -62,6 +66,7 @@ namespace Vilvaos.Models
                     command.Parameters.AddWithValue("@PrecioC", PrecioC);
                     command.Parameters.AddWithValue("@PrecioV", PrecioV);
                     command.Parameters.AddWithValue("@IdProveedor", IdProveedor);
+                    command.Parameters.AddWithValue("@IdEmpresa", IdEmpresa);
 
                     connection.Open();
                     command.ExecuteNonQuery();

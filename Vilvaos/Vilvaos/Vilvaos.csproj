@@ -187,6 +187,7 @@
     <Content Include="Content\Styles\cliente.css" />
     <Content Include="Content\Styles\Index.css" />
     <Content Include="Content\Styles\login.css" />
+    <Content Include="Content\Styles\Memoriza.css" />
     <Content Include="Content\Styles\producto.css" />
     <Content Include="Content\Styles\Proveedor.css" />
     <Content Include="favicon.ico" />
@@ -218,6 +219,7 @@
     <Content Include="Scripts\Script\cliente.js" />
     <Content Include="Scripts\Script\Index.js" />
     <Content Include="Scripts\Script\login.js" />
+    <Content Include="Scripts\Script\Memoriza.js" />
     <Content Include="Scripts\Script\producto.js" />
     <Content Include="Scripts\Script\proveedor.js" />
     <Content Include="Web.config" />
@@ -239,6 +241,7 @@
     <Content Include="Views\Home\Agregar_ActualizarProducto.cshtml" />
     <Content Include="Views\Home\Agregar_ActualizarCliente.cshtml" />
     <Content Include="Views\Home\Agregar_ActualizarProveedor.cshtml" />
+    <Content Include="Views\Home\Memoriza.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,38 +1,38 @@
-﻿////$(document).ready(function () {
-////    document.getElementById("loader-container").style.display = "flex";
-////    $.ajax({
-////        type: 'POST',
-////        url: "ConsultarProveedores",
-////        contentType: "application/json;charset=utf-8",
-////        datatype: "json",
-////        success: function (jsondata, stat) {
-////            var datos = JSON.parse(jsondata);
-////            var tabla = document.getElementById("TablaBodyProveedor");
-////            tabla.innerHTML = "";
-////            var contenidoTabla = ""; // Variable para acumular el contenido
-////            for (var i = 0; i < datos.length; i++) {
-////                contenidoTabla += "<tr>" +
-////                    "<th scope='row'>" + datos[i].IdProveedor + "</th>" +
-////                    "<td>" + datos[i].Nombre + "</td>" +
-////                    "<td>" + datos[i].Telefono + "</td>" +
-////                    "<td>" + datos[i].Ciudad + "</td>" +
-////                    "<td>" +
-////                    "<button class='btnTablaP btn btn-info' onclick='redirectToAction(" + 2 + "," + datos[i].IdProveedor + ")'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>" +
-////                    "<button class='btnTablaP btn btn-danger' onclick='EliminarProveedor(" + datos[i].IdProveedor +")'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
-////                    "</td>" +
-////                    "</tr>";
-////            }
-////            tabla.innerHTML = contenidoTabla;
+﻿$(document).ready(function () {
+    document.getElementById("loader-container").style.display = "flex";
+    $.ajax({
+        type: 'POST',
+        url: "ConsultarProveedores",
+        contentType: "application/json;charset=utf-8",
+        datatype: "json",
+        success: function (jsondata, stat) {
+            var datos = JSON.parse(jsondata);
+            var tabla = document.getElementById("TablaBodyProveedor");
+            tabla.innerHTML = "";
+            var contenidoTabla = ""; // Variable para acumular el contenido
+            for (var i = 0; i < datos.length; i++) {
+                contenidoTabla += "<tr>" +
+                    "<th scope='row'>" + datos[i].IdProveedor + "</th>" +
+                    "<td>" + datos[i].Nombre + "</td>" +
+                    "<td>" + datos[i].Telefono + "</td>" +
+                    "<td>" + datos[i].Ciudad + "</td>" +
+                    "<td>" +
+                    "<button class='btnTablaP btn btn-info' onclick='redirectToAction(" + 2 + "," + datos[i].IdProveedor + ")'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>" +
+                    "<button class='btnTablaP btn btn-danger' onclick='EliminarProveedor(" + datos[i].IdProveedor +")'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
+                    "</td>" +
+                    "</tr>";
+            }
+            tabla.innerHTML = contenidoTabla;
 
-////            ManejaFunciones();
-////            document.getElementById("loader-container").style.display = "none";
-////        },
-////        error: function (xhr, status) {
-////            alert("Error: " + xhr + "-" + status);
-////            document.getElementById("loader-container").style.display = "none";
-////        },
-////    });
-////});
+            ManejaFunciones();
+            document.getElementById("loader-container").style.display = "none";
+        },
+        error: function (xhr, status) {
+            alert("Error: " + xhr + "-" + status);
+            document.getElementById("loader-container").style.display = "none";
+        },
+    });
+});
 
 function ManejaFunciones() {
     $('#myTableCliente').DataTable({

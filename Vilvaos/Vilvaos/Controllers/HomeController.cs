@@ -341,5 +341,11 @@ namespace Vilvaos.Controllers
                 return builder.ToString();
             }
         }
+
+        public ActionResult Memoriza()
+        {
+            return View();
+        }
+
     }
 }
