@@ -91,7 +91,7 @@
 }
 
 .btnHeader {
-    width: 5rem;
+    font-size: 1.5rem;
     background-color: #12DD9C !important;
     border-color: #12DD9C !important;
 }
@@ -136,6 +136,9 @@
     display: flex;
     justify-content: end;
 }
+
+
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -166,7 +169,7 @@ textarea {
 }
 
 .imgFooter {
-    width: 10%;
+    width: 120px;
 }
 
 .redSocialFooter {
@@ -208,4 +211,9 @@ textarea {
 .redesFooter::after {
     width: 30%;
     height: 2px;
+}
+@media screen and (max-width: 700px) {
+    .infoRedes .redes {
+        display: none; /* Oculta el elemento cuando la pantalla es más pequeña que 700px */
+    }
 }

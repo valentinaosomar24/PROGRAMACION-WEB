@@ -87,15 +87,15 @@ function ManejaFunciones(dato1, dato2, dato3)
             document.querySelector('.tablaProductos').style.display = 'block';
             document.querySelector('.btnAgregarProductodiv').style.display = 'block';
         } else {
-            Grafico.innerHTML = "<div class='d-flex justify-content-around'><div style='width:400px; height: 400px;'><canvas id='Grafico1'></canvas></div><div style='width: 300px; height: 300px;'><canvas id='Grafico2'></canvas></div></div>";
+            Grafico.innerHTML = "<div class='GraficoProductos' id='GraficoProductos'><div class='d-flex flex-wrap justify-content-center flex-lg-nowrap'><div class='grafico-container' style='max-width: 100%; height: 400px;'><canvas id='Grafico1' style='width: 100%; height: 100%;'></canvas></div><div class='grafico-container' style='max-width: 100%; height: 300px;'><canvas id='Grafico2' style='width: 100%; height: 100%;'></canvas></div></div></div>";
             document.querySelector('.tablaProductos').style.display = 'none';
             document.querySelector('.GraficoProductos').style.display = 'block';
             document.querySelector('.btnAgregarProductodiv').style.display = 'none';
             var data = {
-                labels: ['Productos con menos de 10 en stock', 'Productos con menos de 30 en stock', 'Productos con mas de 30 en stock'],
+                labels: ['Menos de 10', 'Menos de 30', 'Mas de 30'],
                 datasets: [{
                     data: [dato1, dato2, dato3], // Porcentajes
-                    backgroundColor: ['red', 'yellow', 'green']
+                    backgroundColor: ['#f5c6cb', '#ffeeba', '#c3e6cb']
                 }]
             };
 

@@ -120,37 +120,38 @@ body {
     margin: 0;
 }
 
-.datosbasicosempresa {
-    margin: 100px;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
+.contenedorInformacion {
+    text-align: center;
+    font-family: Bahnschrift;
 }
 
 .containerUsuario {
-    font-family: Arial, sans-serif;
     font-size: 15px;
-    padding: 5px;
+    padding: 50px;
     background-color: #fff;
     border-radius: 30px;
     margin: 40px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
 }
 
-.usuario {
+.contenedorDatos {
     margin-bottom: 20px;
 }
 
 
 h2 {
-    color: #01110c;
+    color: #153E50;
 }
 
 label {
     font-weight: bold;
 }
 
-.usuario input {
+.contenedorDatos input {
     max-width: 100% !important;
     width: 100%;
     padding: 8px;
@@ -174,9 +175,9 @@ label {
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: #0FAA87;
-}
+    .button:hover {
+        background-color: #18888C;
+    }
 
 
 

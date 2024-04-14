@@ -26,19 +26,16 @@
         <div class="hearder1 col-12 d-flex">
             <div class="col-4">
                 <div class="input-group">
-                    <div class="form-outline">
-                        <input id="search-input" type="search" placeholder="Buscar..." class="inputHeader" />
-                    </div>
-                    <button id="search-button" type="button" class="btn btn-primary btnHeader">
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                    <button id="asistenete" type="button" class="btn btn-primary btnHeader">
+                        Asistente <i class="fa fa-question-circle" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
             <div class="col-4 logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
             <div class="col-4 infoRedes d-flex">
-                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa fa-facebook-square redSocial" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram redSocial" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter-square redSocial" aria-hidden="true"></i></a>
+                <a class="redes" href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa fa-facebook-square redSocial" aria-hidden="true"></i></a>
+                <a class="redes" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram redSocial" aria-hidden="true"></i></a>
+                <a class="redes" href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter-square redSocial" aria-hidden="true"></i></a>
                 <i class="fa fa-user-circle userHeader" aria-hidden="true"></i>
                 @{if (Session["User"] == null) {
                         <button class="btnLogin" onclick="location.href='@Url.Action("Login", "Home")'">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
@@ -50,18 +47,23 @@
             </div>
         </div>
 
-        <div class="header2 col-12 d-flex justify-content-around">
-            <div class="col-3 d-flex justify-content-center">
-                <a href="Index" class="linkheader @(Request.Url.AbsolutePath.Contains("/Index") ? "active-link" : "")">Inicio</a>
-            </div>
-            <div class="col-3 d-flex justify-content-center">
-                <a href="@Url.Action("Cliente", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Cliente") ? "active-link" : "")">Cliente</a>
-            </div>
-            <div class="col-3 d-flex justify-content-center">
-                <a href="@Url.Action("Producto", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Producto") ? "active-link" : "")">Producto</a>
-            </div>
-            <div class="col-3 d-flex justify-content-center">
-                <a href="@Url.Action("Proveedor", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Proveedor") ? "active-link" : "")">Proveedor</a>
+        <div class="header2 col-12 d-flex navbar-expand-lg justify-content-around">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-3 d-flex justify-content-center navbar-nav">
+                    <a href="Index" class="linkheader @(Request.Url.AbsolutePath.Contains("/Index") ? "active-link" : "")">Inicio</a>
+                </div>
+                <div class="col-3 d-flex justify-content-center navbar-nav">
+                    <a href="@Url.Action("Cliente", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Cliente") ? "active-link" : "")">Cliente</a>
+                </div>
+                <div class="col-3 d-flex justify-content-center navbar-nav">
+                    <a href="@Url.Action("Producto", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Producto") ? "active-link" : "")">Producto</a>
+                </div>
+                <div class="col-3 d-flex justify-content-center navbar-nav">
+                    <a href="@Url.Action("Proveedor", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Proveedor") ? "active-link" : "")">Proveedor</a>
+                </div>
             </div>
         </div>
 
@@ -74,29 +76,37 @@
     </div>
 
     <footer class="page-footer bg-dark pt-4 footerPage">
-        <div class="container-fluid text-center text-md-left contentFooter">
+        <div class="container-fluid text-md-left contentFooter">
             <div class="d-flex justify-content-center">
                 <img class="imgFooter" src="~/img/vilvaosBackGroundBlack.png" />
             </div>
-            <div class=" d-flex justify-content-center redesFooter">
+            <div class=" d-flex text-center justify-content-center redesFooter">
                 <div class="redes mt-4">
                     <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa fa-facebook-square redSocialFooter" aria-hidden="true"></i></a>
                     <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram redSocialFooter" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter-square redSocialFooter" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="col-12 d-flex d-flex mt-4 justify-content-around">
-                <div class="col-4">
-                    <h3 class="text-uppercase">VILVAOS INVENTORIES</h3>
-                    <p>En Vilvaos, estamos dedicados a simplificar la gestión de inventarios para tiendas pequeñas. Nuestra pasión es ayudar a las empresas a crecer y prosperar mediante soluciones inteligentes y accesibles.  Nos esforzamos por ser reconocidos por nuestra innovación, facilidad de uso y compromiso con el éxito de nuestros clientes. Únete a nosotros en este viaje hacia la eficiencia y el éxito empresarial.</p>
-                </div>
-                <hr class="clearfix w-100 d-md-none pb-3">
-                <div class="col-4">
-                    <h3 class="text-uppercase">CONTACTANOS</h3>
+            <div class="d-flex justify-content-center">
+                <div class=" d-flex justify-content-center flex-column">
+                    <h3 class=" text-uppercase mt-4 mb-3 text-center mx-auto">CONTACTANOS</h3>
                     <ul class="list-unstyled">
-                        <li><b>Tel: </b>7777777</li>
-                        <li><b>Correo: </b>correoEjemplo@gmail.com</li>
-                        <li><b>Direccion: </b>CLL EJM #PLO 10 Bogota Dc</li>
+                        <li class="row">
+                            <div class="col-5"><b>Telefono</b></div>
+                            <div class="col-7">7777777</div>
+                        </li>
+                        <li class="row">
+                            <div class="col-5"><b>Correo</b></div>
+                            <div class="col-7">correoEjemplo@gmail.com</div>
+                        </li>
+                        <li class="row">
+                            <div class="col-5"><b>Direccion</b></div>
+                            <div class="col-7">CLL EJM #PLO 10</div>
+                        </li>
+                        <li class="row">
+                            <div class="col-5"><b>Ciudad</b></div>
+                            <div class="col-7">Bogota Dc</div>
+                        </li>
                     </ul>
                 </div>
             </div>
