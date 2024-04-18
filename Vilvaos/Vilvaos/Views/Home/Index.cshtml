@@ -7,55 +7,114 @@
 @if (Session["User"] == null)
 {
 
-    <div id="carouselControls" class="carousel slide card" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselControls" data-slide-to="1"></li>
-            <li data-target="#carouselControls" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('../../img/imgCarrusel1.png'); ">
-            </div>
-            <div class="carousel-item" style="background-image: url('../../img/imgCarrusel2.png'); ">
-            </div>
-            <div class="carousel-item" style="background-image: url('../../img/imgCarrusel3.png'); ">
-            </div>
+    <section class="jumbotron">
+        <div class="container animacion">
+            <h1 class="animacion-text" id="changingText">Nuestra plataforma te ofrece una visión completa y detallada de tus existencias.</h1>
         </div>
+    </section>
 
-        <div class="card-img-overlay informacionFormulario d-flex justi">
-            <div class="col-12 d-flex formulario">
-                <div class="col-8 TextSaberMas">
-                    <p class="textCarrusel text-white">¿QUIERES SABER MAS DE NOSOTROS?</p>
-                    <p class="textCarrusel text-white">Y de como puedes manejar tu inventario</p>
+    <section class="services ">
+        <div class="container animacion">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="service-item  ">
+                        <h2>Servicio 1</h2>
+                        <p>Descripción del servicio 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed scelerisque condimentum urna non cursus.Integer malesuada nulla ut nisi faucibus, sed vehicula eros viverra.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
-                <div class="col-4 columnaform">
-                    <div class="formularioInfo">
-                        <div class="form-group text-center">
-                            <h2 class="h1 textCarrusel text-white">INGRESA TU INFORMACION</h2>
-                            <div class="form-group mt-5">
-                                <input type="text" class="inputInfo" placeholder="Nombre:">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="inputInfo" placeholder="Email:">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="inputInfo" placeholder="Documento:">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="inputInfo" placeholder="Celular:">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="inputInfo" placeholder="Informacion de interes:">
-                            </div>
-                            <input type="submit" value="ENVIAR" class="mt-5 btnEnviarInfo btn btn-success">
-                        </div>
+                <div class="col-md-4">
+                    <div class="service-item  ">
+                        <h2>Servicio 2</h2>
+                        <p>Descripción del servicio 2. Duis ullamcorper mattis ex, non malesuada mi aliquet eget.Fusce lacinia sapien a elit sagittis, sit amet consequat ipsum fermentum.Sed in ante sem.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item  ">
+                        <h2>Servicio 3</h2>
+                        <p>Descripción del servicio 3. Vivamus eget vehicula lorem.Mauris eget lacus sit amet tortor varius posuere.Nunc varius leo eget diam facilisis, id varius ipsum accumsan.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="container animacion mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="service-item  ">
+                        <h2>Servicio 4</h2>
+                        <p>Descripción del servicio 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed scelerisque condimentum urna non cursus.Integer malesuada nulla ut nisi faucibus, sed vehicula eros viverra.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item  ">
+                        <h2>Servicio 5</h2>
+                        <p>Descripción del servicio 3. Vivamus eget vehicula lorem.Mauris eget lacus sit amet tortor varius posuere.Nunc varius leo eget diam facilisis, id varius ipsum accumsan.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+
+    <section class="contact">
+        <div class="container animacion">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="contact-form" >
+                        <h2 >Contactanos</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="nombre" >Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" >Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje" >Mensaje:</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: #0A2342;">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nosotros" style="background-color: #f2f2f2;">
+        <div class="container animacion">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="nosotros-item  ">
+                        <img class="imgMVO" src="~/img/cohete.png"/>
+                        <h2>Mision</h2>
+                        <p>Facilitar a las pequeñas tiendas una herramienta eficiente y fácil de usar para gestionar sus inventarios, registrar ventas y controlar costos, con el fin de optimizar sus operaciones y potenciar su éxito comercial.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nosotros-item  ">
+                        <img class="imgMVO" src="~/img/vision.png" />
+                        <h2>Vision</h2>
+                        <p>Convertirnos en el aliado preferido de las pequeñas tiendas en la gestión de inventarios, siendo reconocidos por nuestra innovación, confiabilidad y compromiso con el crecimiento de nuestros usuarios.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nosotros-item  ">
+                        <img class="imgMVO" src="~/img/Objetivo.png"/>
+                        <h2>Objetivo</h2>
+                        <p>Mejorar la eficiencia y rentabilidad de las pequeñas tiendas mediante una plataforma de gestión de inventarios integral, que les permita optimizar sus operaciones, controlar sus costos y aumentar sus ventas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div id="popupOverlay" class="overlay">
         <div id="popup" class="popup">
@@ -70,6 +129,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             mostrarPopup();
+
+            var textos = [
+                "Optimiza tu gestión de inventarios con nuestra plataforma intuitiva y fácil de usar.",
+                "Control total sobre tus existencias con nuestro sistema de inventario en tiempo real.",
+                "Maximiza la eficiencia de tu negocio con un seguimiento preciso de todos tus productos.",
+                "Obtén informacion valiosa sobre tu inventario para tomar decisiones informadas.",
+                "Nuestra plataforma te ofrece una visión completa y detallada de tus existencias."
+            ];
+
+            var currentIndex = 0;
+            var changingText = document.getElementById('changingText');
+
+            function changeText() {
+                changingText.textContent = textos[currentIndex];
+                currentIndex = (currentIndex + 1) % textos.length;
+            }
+
+            setInterval(changeText, 5000);
         });
 
         function mostrarPopup() {
@@ -83,59 +160,60 @@
 }
 else
 {
-<div class="vistaUsuarioRegistrado" id="InfoUsuario">
-    <header class="encabezado">
-        <img src="https://dulcecompaniaperu.com/wp-content/uploads/2018/03/itoya-ginza_1.jpg">
-    </header>
+    <div class="vistaUsuarioRegistrado" id="InfoUsuario">
+        <header class="encabezado">
+            <img src="https://dulcecompaniaperu.com/wp-content/uploads/2018/03/itoya-ginza_1.jpg">
+        </header>
 
-    <div class="imagen">
-        <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-    </div>
-
-    <div class="contenedorInformacion">
-        <h2>ECO EMPRESA</h2>
-        <h3>12345678-9<h3>
-
-        <div class="containerUsuario">
-            <div class="contenedorDatos">
-                <h2>DATOS DE LA EMPRESA</h2>
-                <label>Ciudad </label>
-                <input id="CiudadEmpresa" type="text" value="">
-                <br>
-                <label>Categoria </label>
-                <input id="CategoriaEmpresa" type="text" placeholder="Categoria de la empresa">
-                <br>
-                <label>Telefono </label>
-                <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
-                <br>
-                <label>Direccion </label>
-                <input id="DireccionEmpresa" type="text" placeholder="Direccion de la empresa">
-                <br>
-                <label>Correo </label>
-                <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
-                
-                <div id="btnIndexForm"></div>
-            </div>
-            <div class="contenedorDatos">
-                <h2>INFORMACION DE LA PERSONA A CARGO</h2>
-                <label class="labels">Nombre </label>
-                <input id="CargoEmpresa" type="text" placeholder="Nombres y Apellidos">
-                <br>
-                <label>Correo </label>
-                <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
-                <br>
-                <label>Telefono </label>
-                <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
-                <br>
-             </div>
+        <div class="imagen">
+            <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
         </div>
-    </div>
 
-        
-</div>
-<script>
-       //MostrarDatos();
-</script>
+        <div class="contenedorInformacion">
+            <h2>ECO EMPRESA</h2>
+            <h3>
+                12345678-9<h3>
+
+                    <div class="containerUsuario">
+                        <div class="contenedorDatos">
+                            <h2>DATOS DE LA EMPRESA</h2>
+                            <label>Ciudad </label>
+                            <input id="CiudadEmpresa" type="text" value="">
+                            <br>
+                            <label>Categoria </label>
+                            <input id="CategoriaEmpresa" type="text" placeholder="Categoria de la empresa">
+                            <br>
+                            <label>Telefono </label>
+                            <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
+                            <br>
+                            <label>Direccion </label>
+                            <input id="DireccionEmpresa" type="text" placeholder="Direccion de la empresa">
+                            <br>
+                            <label>Correo </label>
+                            <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
+
+                            <div id="btnIndexForm"></div>
+                        </div>
+                        <div class="contenedorDatos">
+                            <h2>INFORMACION DE LA PERSONA A CARGO</h2>
+                            <label class="labels">Nombre </label>
+                            <input id="CargoEmpresa" type="text" placeholder="Nombres y Apellidos">
+                            <br>
+                            <label>Correo </label>
+                            <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
+                            <br>
+                            <label>Telefono </label>
+                            <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
+                            <br>
+                        </div>
+                    </div>
+        </div>
+
+
+    </div>
+    <script>
+                           //MostrarDatos();
+    </script>
 }
 
 

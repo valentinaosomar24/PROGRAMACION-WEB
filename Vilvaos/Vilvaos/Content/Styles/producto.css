@@ -74,15 +74,6 @@
 
 /*tabla*/
 
-.tablaProductos {
-    overflow-x: auto;
-    max-width: 100%;
-}
-
-#myTableProducts {
-    border-collapse: collapse;
-}
-
 .GraficoProductos {
     display: flex;
     justify-content: center;
@@ -91,15 +82,4 @@
 
 .grafico-container {
     margin: 10px;
-}
-
-@media screen and (max-width: 767px) {
-    .GraficoProductos {
-        flex-direction: column;
-    }
-
-    .grafico-container {
-        width: 100%;
-        max-width: none;
-    }
 }

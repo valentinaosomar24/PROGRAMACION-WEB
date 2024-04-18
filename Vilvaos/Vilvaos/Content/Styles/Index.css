@@ -1,62 +1,123 @@
-﻿
-.carousel-item {
-    min-height: 500px;
+﻿/****************ESTILOS USUARIO SIN LOGEAR************************/
+body {
+    overflow-x: hidden;
+}
+
+.container p{
+    font-size:1.5rem;
+}
+
+.jumbotron {
+    background-image: url('https://blog.gieicom.com/hubfs/control_de_inventarios-1.png');
     background-size: cover;
-}
-
-
-.informacionFormulario {
-    align-items: center !important;
-    justify-content: center !important;
-    height: 100% !important;
-}
-
-.columnaform {
-    border-radius: 15px;
-    background: rgba(255,255,255,0.3);
-}
-.formulario {
+    height: 100vh;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    color: white;
 }
 
-.formularioInfo {
-    padding-top: 35px;
-    padding-bottom: 35px;
+.animacion-text {
+    text-align: center;
+    animation: cambioTexto 5s infinite;
 }
 
-.formularioInfo .form-group h1 {
-    color: #12DD9C;
+.services {
+    padding: 50px 0;
 }
 
-.TextSaberMas {
-    font-size:4rem;
+.service-item {
+    text-align: center;
 }
 
-.textCarrusel {
-    font-weight: 900;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
+/*contactanos*/
+.contact {
+    padding: 50px 0;
+    background-color: #153E50;
+    color: #000A2F;
 }
 
-.inputInfo {
-    width: 100%;
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
     border-radius: 10px;
-    border: none;
-    border-bottom: 3px solid #12DD9C;
+    background-color: #ffffff75;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
+    .contact-form h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
 .form-group {
-    width: 100% !important;
-    font-size: 20px !important;
-    border:none;
-
+    margin-bottom: 20px;
 }
 
-.btnEnviarInfo {
-    width: 100%;
-    font-size: 20px !important;
+.form-control {
+    max-width: 100% !important;
+    font-size:1.5rem;
 }
+
+    .form-group label {
+        color: #000A2F;
+    }
+
+
+/*mision vision y objetivos*/
+.nosotros {
+    padding: 50px 0;
+}
+
+.nosotros-item {
+    text-align: center;
+}
+
+.imgMVO {
+    width: 25%;
+}
+
+/*animacion*/
+@keyframes cambioTexto {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+@keyframes up-and-down {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.25);
+    }
+}
+
+.animacion {
+    view-timeline: --scroll;
+    view-timeline-axis: block;
+    animation-timeline: --scroll;
+    animation-name: up-and-down;
+    animation-fill-mode: both;
+} 
+
+/* Estilos para el popup */
 
 .overlay {
     display: none;
@@ -69,8 +130,6 @@
     justify-content: center;
     align-items: center;
 }
-
-/* Estilos para el popup */
 .popup {
     background-color: #fff;
     padding: 20px;
@@ -93,7 +152,7 @@
     margin-top: 10px;
 }
 
-/****************************************/
+/****************ESTILOS ISUARIO LOGEADO************************/
 .encabezado img {
     background-position: center;
     background-repeat: no-repeat;
@@ -157,7 +216,7 @@ label {
     padding: 8px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 1px solid #12DD9C;
+    border: 1px solid #18888C;
     border-radius: 4px;
 }
 
@@ -167,7 +226,7 @@ label {
 }
 
 .button {
-    background-color: #12DD9C;
+    background-color: #18888C;
     color: #fff;
     padding: 10px 20px;
     border: none;

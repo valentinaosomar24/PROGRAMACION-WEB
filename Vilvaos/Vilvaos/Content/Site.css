@@ -48,8 +48,8 @@
 }
 
 .active-link {
-    color: #12DD9C !important;
-    font-size:25px !important;
+    color: #18888C !important;
+    font-size: 25px !important;
 }
 
 .btnLogin {
@@ -76,28 +76,28 @@
 .inputHeader {
     width: 18rem;
     border: none;
-    border-bottom: 2px solid #12DD9C;
+    border-bottom: 2px solid #18888C;
     height: 30px;
 }
 
 .userHeader {
     font-size: 30px !important;
     padding-left: 50px !important;
-    color: #12DD9C !important;
+    color: #18888C !important;
 }
 
 .inputHeader::placeholder {
-    color: #12DD9C;
+    color: #18888C;
 }
 
 .btnHeader {
     font-size: 1.5rem;
-    background-color: #12DD9C !important;
-    border-color: #12DD9C !important;
+    background-color: #18888C !important;
+    border-color: #18888C !important;
 }
 
 .redSocial:hover {
-    color: #12DD9C
+    color: #18888C
 }
 
 .redSocial {
@@ -124,7 +124,7 @@
 
 .linkheader:hover {
     text-decoration: none;
-    color: #12DD9C;
+    color: #18888C;
 }
 
 .logoNav {
@@ -211,9 +211,4 @@ textarea {
 .redesFooter::after {
     width: 30%;
     height: 2px;
-}
-@media screen and (max-width: 700px) {
-    .infoRedes .redes {
-        display: none; /* Oculta el elemento cuando la pantalla es más pequeña que 700px */
-    }
 }

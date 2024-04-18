@@ -26,16 +26,13 @@
         <div class="hearder1 col-12 d-flex">
             <div class="col-4">
                 <div class="input-group">
-                    <button id="asistenete" type="button" class="btn btn-primary btnHeader">
-                        Asistente <i class="fa fa-question-circle" aria-hidden="true"></i>
-                    </button>
+                    <a class="redes" href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa fa-facebook-square redSocial" aria-hidden="true"></i></a>
+                    <a class="redes" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram redSocial" aria-hidden="true"></i></a>
+                    <a class="redes" href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter-square redSocial" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-4 logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
             <div class="col-4 infoRedes d-flex">
-                <a class="redes" href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa fa-facebook-square redSocial" aria-hidden="true"></i></a>
-                <a class="redes" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram redSocial" aria-hidden="true"></i></a>
-                <a class="redes" href="https://twitter.com/?lang=es" target="_blank"><i class="fa fa-twitter-square redSocial" aria-hidden="true"></i></a>
                 <i class="fa fa-user-circle userHeader" aria-hidden="true"></i>
                 @{if (Session["User"] == null) {
                         <button class="btnLogin" onclick="location.href='@Url.Action("Login", "Home")'">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
@@ -64,7 +61,8 @@
                 <div class="col-3 d-flex justify-content-center navbar-nav">
                     <a href="@Url.Action("Proveedor", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Proveedor") ? "active-link" : "")">Proveedor</a>
                 </div>
-            </div>
+               
+                </div>
         </div>
 
 
