@@ -161,58 +161,56 @@
 else
 {
     <div class="vistaUsuarioRegistrado" id="InfoUsuario">
-        <header class="encabezado">
-            <img src="https://dulcecompaniaperu.com/wp-content/uploads/2018/03/itoya-ginza_1.jpg">
-        </header>
+        <div class="encabezado">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/420/937/non_2x/back-to-school-background-with-school-supplies-background-free-photo.jpg">
+        </div>
 
-        <div class="imagen">
-            <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+        <div class="imagenUsuario">
+            <img src="https://cdn-icons-png.flaticon.com/512/204/204191.png">
         </div>
 
         <div class="contenedorInformacion">
-            <h2>ECO EMPRESA</h2>
-            <h3>
-                12345678-9<h3>
+            <h2 id="NombreEmpresa"></h2>
+            <h3 id="NitEmpresa"></h3>
 
-                    <div class="containerUsuario">
-                        <div class="contenedorDatos">
+            <div class="containerUsuario">
+                <div class="contenedorDatos container">
+                    <div class="col-12 justify-content-around cuandroDatos">
+                        <div class="col-12 col-md-5">
                             <h2>DATOS DE LA EMPRESA</h2>
-                            <label>Ciudad </label>
-                            <input id="CiudadEmpresa" type="text" value="">
-                            <br>
-                            <label>Categoria </label>
-                            <input id="CategoriaEmpresa" type="text" placeholder="Categoria de la empresa">
-                            <br>
-                            <label>Telefono </label>
-                            <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
-                            <br>
-                            <label>Direccion </label>
-                            <input id="DireccionEmpresa" type="text" placeholder="Direccion de la empresa">
-                            <br>
-                            <label>Correo </label>
-                            <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
-
-                            <div id="btnIndexForm"></div>
+                            <div class="mt-5">
+                                <label>Ciudad </label>
+                                <input id="CiudadEmpresa" type="text" value="">
+                                <label>Categoria </label>
+                                <input id="CategoriaEmpresa" type="text" placeholder="Categoria de la empresa">
+                                <label>Telefono </label>
+                                <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
+                                <label>Direccion </label>
+                                <input id="DireccionEmpresa" type="text" placeholder="Direccion de la empresa">
+                                <label>Correo </label>
+                                <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
+                            </div>
                         </div>
-                        <div class="contenedorDatos">
-                            <h2>INFORMACION DE LA PERSONA A CARGO</h2>
-                            <label class="labels">Nombre </label>
-                            <input id="CargoEmpresa" type="text" placeholder="Nombres y Apellidos">
-                            <br>
-                            <label>Correo </label>
-                            <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
-                            <br>
-                            <label>Telefono </label>
-                            <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
-                            <br>
+                        <div class="col-12 col-md-5">
+                            <h2 class="TituloPersonaCargo">INFORMACION DE LA PERSONA A CARGO</h2>
+                            <div class="mt-5">
+                                <label>Nombre </label>
+                                <input id="CargoEmpresa" type="text" placeholder="Nombres y Apellidos">
+                                <label>Correo </label>
+                                <input id="CorreoEmpresa" type="email" placeholder="Correo de la empresa">
+                                <label>Telefono </label>
+                                <input id="TelefonoEmpresa" type="text" placeholder="Telefono de la empresa">
+                            </div>
+                            <div class="mt-4 d-flex justify-content-end" id="btnIndexForm">
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </div>
-
-
     </div>
     <script>
-                           //MostrarDatos();
+      MostrarDatos();
     </script>
 }
 

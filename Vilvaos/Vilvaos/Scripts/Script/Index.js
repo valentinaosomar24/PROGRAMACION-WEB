@@ -25,9 +25,8 @@ function MostrarDatos()
                 btn.innerHTML = "<button class='button' type='button' onclick='GuardarEmpresa()'>Guardar</button>"
             } else
             {
-                NombreEmpresa.value = datos[0].Nombre;
-                NitEmpresa.value = datos[0].NIT;
-                NitEmpresa.setAttribute('readonly', true);
+                NombreEmpresa.innerHTML = datos[0].Nombre;
+                NitEmpresa.innerHTML = "NIT: "+datos[0].NIT;
                 CiudadEmpresa.value = datos[0].Ciudad;
                 CategoriaEmpresa.value = datos[0].Categoria;
                 CorreoEmpresa.value = datos[0].Correo;
