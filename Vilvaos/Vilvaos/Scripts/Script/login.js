@@ -10,10 +10,15 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
-function IniciarSesion()
+function IniciarSesion(ambiente)
 {
-    var user = document.getElementById("correoLogin").value;
-    var psw = document.getElementById("passwordLogin").value;
+    if (ambiente === 'PC') {
+        var user = document.getElementById("correoLogin").value;
+        var psw = document.getElementById("passwordLogin").value;
+    } else {
+        var user = document.getElementById("correoLoginM").value;
+        var psw = document.getElementById("passwordLoginM").value;
+    }
     if (user.replace(/ /g, '') != "" && psw.replace(/ /g, '') != "") {
         var data = "{'user':'" + user + "','psw':'" + psw + "'}"
         $.ajax({
@@ -37,11 +42,18 @@ function IniciarSesion()
     }
 }
 
-function Registrarse()
+function Registrarse(ambiente)
 {
-    var NombreEm = document.getElementById("NombreEm").value;
-    var CorreoResgistrar = document.getElementById("CorreoResgistrar").value;
-    var ContraseñaRegistrar = document.getElementById("ContraseñaRegistrar").value;
+    if (ambiente === 'PC') {
+        var NombreEm = document.getElementById("NombreEm").value;
+        var CorreoResgistrar = document.getElementById("CorreoResgistrar").value;
+        var ContraseñaRegistrar = document.getElementById("ContraseñaRegistrar").value;
+    } else {
+        var NombreEm = document.getElementById("NombreEmM").value;
+        var CorreoResgistrar = document.getElementById("CorreoResgistrarM").value;
+        var ContraseñaRegistrar = document.getElementById("ContraseñaRegistrarM").value;
+    }
+    
     if (NombreEm.replace(/ /g, '') != "" && CorreoResgistrar.replace(/ /g, '') != "" && ContraseñaRegistrar.replace(/ /g, '') != "") {
         var data = "{'Nombre':'" + NombreEm + "','Correo':'" + CorreoResgistrar + "','Contraseña':'" + ContraseñaRegistrar + "'}"
         $.ajax({
@@ -59,4 +71,25 @@ function Registrarse()
     } else {
         alert("Ingrese usuario y contraseña")
     }
+}
+
+function CambiarTexto() {
+    const formulario = document.getElementById('formulario');
+    const login = document.querySelector('.login');
+    const registro = document.querySelector('.registro');
+    const mostrarLoginCheckbox = document.getElementById('mostrarLogin');
+    input = document.getElementById("btn").checked;
+    if (input) {
+        login.classList.remove('activo');
+        registro.classList.add('activo');
+        document.getElementById("btnSwitch").innerHTML = "Iniciar";
+    } else {
+        login.classList.add('activo');
+        registro.classList.remove('activo');
+        document.getElementById("btnSwitch").innerHTML = "Registrar";
+    }
+}
+
+function CambiarLoginRegister() {
+
 }

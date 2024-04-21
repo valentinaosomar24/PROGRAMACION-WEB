@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-<div class="container" id="container">
+<div class="container loginPc" id="container">
     <div class="form-container sing-up-container">
         <div class="form">
             <h1>Crear cuenta</h1>
@@ -21,7 +21,7 @@
             <input id="NombreEm" type="text" placeholder="Nombre Empresa" />
             <input id="CorreoResgistrar" type="email" placeholder="Email" />
             <input id="ContraseñaRegistrar" type="password" placeholder="Contraseña" />
-            <button onclick="Registrarse()">Registrarse</button>
+            <button onclick="Registrarse('PC')">Registrarse</button>
         </div>
     </div>
     <div class="form-container sign-in-container">
@@ -36,19 +36,19 @@
             <input id="correoLogin" type="email" placeholder="Email" />
             <input id="passwordLogin" type="password" placeholder="Contraseña" />
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <button onclick="IniciarSesion()">Iniciar sesión</button>
+            <button onclick="IniciarSesion('PC')">Iniciar sesión</button>
         </div>
     </div>
     <div class="overlay-container">
         <div class="overlay">
             <div class="overlay-panel overlay-left">
-                <div class="logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
+                <div class="logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundBlack.png" /></div>
                 <h1>¡Bienvenido de nuevo!</h1>
                 <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
                 <button class="ghost" id="signIn">Iniciar sesión</button>
             </div>
             <div class="overlay-panel overlay-right">
-                <div class="logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
+                <div class="logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundBlack.png" /></div>
                 <h1>¡Bienvenido!</h1>
                 <p>Introduzca sus datos personales.</p>
                 <button class="ghost" id="signUp">Registrarse</button>
@@ -56,6 +56,31 @@
         </div>
     </div>
 </div>
+
+<div class="loginMovil">
+    <div class="switch">
+        <div class="toggle">
+             <input type="checkbox" id="btn" onchange="CambiarTexto()">
+             <label for="btn" id="btnSwitch">Registrar</label>
+        </div>
+    </div>
+    <div class="logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundBlack.png" /></div>
+    <div class="formulario">
+        <div class="login activo">
+            <h2>Iniciar sesión</h2>
+            <input type="email" id="correoLoginM" placeholder="Correo electrónico">
+            <input type="password" id="passwordLoginM" placeholder="Contraseña">
+            <button type="submit" onclick="IniciarSesion('Mov')">Iniciar sesión</button>
+        </div>
+
+        <div class="registro">
+            <h2>Crear cuenta</h2>
+            <input type="text" id="NombreEmM" placeholder="Nombre empresa" required>
+            <input type="email" id="CorreoResgistrarM" placeholder="Correo electrónico" required>
+            <input type="password" id="ContraseñaRegistrarM" placeholder="Contraseña" required>
+            <button type="submit" onclick="Registrarse('Mov')">Registrarse</button>
+        </div>
+    </div>
 </div>
 
 <script src="~/Scripts/Script/login.js"></script>
