@@ -197,6 +197,14 @@
     <Content Include="img\imgCarrusel1.png" />
     <Content Include="img\imgCarrusel2.png" />
     <Content Include="img\imgCarrusel3.png" />
+    <Content Include="img\Memoriza\cliente1.jpg" />
+    <Content Include="img\Memoriza\cliente2.jpg" />
+    <Content Include="img\Memoriza\productos1.jpg" />
+    <Content Include="img\Memoriza\productos2.jpg" />
+    <Content Include="img\Memoriza\proveedor1.jpg" />
+    <Content Include="img\Memoriza\proveedor2.jpg" />
+    <Content Include="img\Memoriza\Usuario1.jpg" />
+    <Content Include="img\Memoriza\Usuario2.jpg" />
     <Content Include="img\vilvaos.png" />
     <Content Include="img\vilvaosBackGroundBlack.png" />
     <Content Include="img\vilvaosBackGroundWhite.png" />

@@ -1,14 +1,14 @@
 ﻿let flippedCards = [];
 let matchedPairs = 0;
 let images = [
-    { src: '../../img/amarillo.png', color: 'amarillo' },
-    { src: '../../img/azul.png', color: 'azul' },
-    { src: '../../img/cafe.png', color: 'cafe' },
-    { src: '../../img/morado.png', color: 'morado' },
-    { src: '../../img/naranja.png', color: 'naranja' },
-    { src: '../../img/rojo.png', color: 'rojo' },
-    { src: '../../img/rosa.png', color: 'rosa' },
-    { src: '../../img/verde.png', color: 'verde' }
+    { src: '../../img/Memoriza/productos1.jpg', explicacion: '../../img/Memoriza/productos1explicacion.jpg' },
+    { src: '../../img/Memoriza/productos2.jpg', explicacion: '../../img/Memoriza/productos2explicacion.jpg' },
+    { src: '../../img/Memoriza/proveedor1.jpg', explicacion: '../../img/Memoriza/proveedor1explicacion.jpg' },
+    { src: '../../img/Memoriza/proveedor2.jpg', explicacion: '../../img/Memoriza/proveedor2explicacion.jpg' },
+    { src: '../../img/Memoriza/Usuario1.jpg', explicacion: '../../img/Memoriza/Usuario1explicacion.jpg' },
+    { src: '../../img/Memoriza/Usuario2.jpg', explicacion: '../../img/Memoriza/Usuario2explicacion.jpg' },
+    { src: '../../img/Memoriza/cliente1.jpg', explicacion: '../../img/Memoriza/cliente1explicacion.jpg' },
+    { src: '../../img/Memoriza/cliente2.jpg', explicacion: '../../img/Memoriza/cliente2explicacion.jpg' }
 ];
 
 // Duplica las imágenes y las mezcla
@@ -30,7 +30,7 @@ images.forEach((img) => {
     const carta = document.createElement('div');
     carta.classList.add('carta');
     carta.setAttribute('data-img', img.src); // Cambiamos a src
-    carta.setAttribute('data-color', img.color); // Agregamos un atributo para el color
+    carta.setAttribute('data-info', img.explicacion); // Agregamos un atributo para el color
     carta.onclick = () => flipCard(carta);
     cuadro.appendChild(carta);
 });
@@ -61,10 +61,8 @@ function flipCard(card) {
 
 function checkMatch() {
     if (flippedCards[0].getAttribute('data-img') === flippedCards[1].getAttribute('data-img')) {
-        const color = flippedCards[0].getAttribute('data-color'); // Obtenemos el color de la carta
-        const imageSrc = flippedCards[0].getAttribute('data-img'); // Obtenemos la ruta de la imagen
-        document.getElementById('colorMatch').innerText = `El color es ${color}`; // Mostramos el color en el modal
-        document.getElementById('imageMatch').src = imageSrc;
+        const info = flippedCards[0].getAttribute('data-info'); // Obtenemos el color de la carta
+        document.getElementById('imageMatch').src = info;
         $('#Coincidencia').modal('show');
         flippedCards = [];
         matchedPairs++;
