@@ -212,3 +212,25 @@ textarea {
     width: 30%;
     height: 2px;
 }
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    display:grid;
+}
+
+.fixed-bottom-right button {
+    font-size: 30px;
+}
+
+
+.imgTituloPag {
+    width: 10rem;
+    border-radius: 15px;
+}
+
+.imgTituloPagUser{
+    position:absolute;
+}

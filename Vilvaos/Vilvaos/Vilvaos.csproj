@@ -194,9 +194,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\Cliente.png" />
+    <Content Include="img\cohete.png" />
+    <Content Include="img\Ganador.png" />
     <Content Include="img\imgCarrusel1.png" />
     <Content Include="img\imgCarrusel2.png" />
     <Content Include="img\imgCarrusel3.png" />
+    <Content Include="img\loader.gif" />
     <Content Include="img\Memoriza\cliente1.jpg" />
     <Content Include="img\Memoriza\cliente2.jpg" />
     <Content Include="img\Memoriza\productos1.jpg" />
@@ -205,6 +209,10 @@
     <Content Include="img\Memoriza\proveedor2.jpg" />
     <Content Include="img\Memoriza\Usuario1.jpg" />
     <Content Include="img\Memoriza\Usuario2.jpg" />
+    <Content Include="img\Objetivo.png" />
+    <Content Include="img\Producto.png" />
+    <Content Include="img\Proveedor.png" />
+    <Content Include="img\Usuario.png" />
     <Content Include="img\vilvaos.png" />
     <Content Include="img\vilvaosBackGroundBlack.png" />
     <Content Include="img\vilvaosBackGroundWhite.png" />

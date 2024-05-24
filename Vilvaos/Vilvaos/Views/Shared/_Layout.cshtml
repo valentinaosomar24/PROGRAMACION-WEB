@@ -17,8 +17,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    
+
+
     <div id="loader-container">
         <div class="loader"></div>
     </div>
@@ -34,11 +34,13 @@
             <div class="col-4 logoNav"><img class="logoNavImg" src="~/img/vilvaosBackGroundWhite.png" /></div>
             <div class="col-4 infoRedes d-flex">
                 <i class="fa fa-user-circle userHeader" aria-hidden="true"></i>
-                @{if (Session["User"] == null) {
+                @{if (Session["User"] == null)
+                    {
                         <button class="btnLogin" onclick="location.href='@Url.Action("Login", "Home")'">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                     }
-                    else {
-                    <button class="btnLogin" onclick="location.href='@Url.Action("Exit", "Home")'">Salir <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    else
+                    {
+                        <button class="btnLogin" onclick="location.href='@Url.Action("Exit", "Home")'">Salir <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                     }
                 }
             </div>
@@ -61,8 +63,7 @@
                 <div class="col-3 d-flex justify-content-center navbar-nav">
                     <a href="@Url.Action("Proveedor", "Home")" class="linkheader @(Request.Url.AbsolutePath.Contains("/Proveedor") ? "active-link" : "")">Proveedor</a>
                 </div>
-               
-                </div>
+            </div>
         </div>
 
 
@@ -72,6 +73,20 @@
         @RenderBody()
         <hr />
     </div>
+    @{if (Session["User"] != null)
+        {
+        <div class="fixed-bottom-right">
+            <button class="btn btn-info mb-3" onclick="location.href='@Url.Action("Memoriza", "Home")'">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>
+            </button>
+            <a href="http://127.0.0.1:8000">
+                <button class="btn btn-info">
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                </button>
+            </a>
+        </div>
+        }
+    }
 
     <footer class="page-footer bg-dark pt-4 footerPage">
         <div class="container-fluid text-md-left contentFooter">
@@ -109,6 +124,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="footer-copyright text-center py-3">
             <p>&copy; @DateTime.Now.Year - Vilvaos Inventories</p>
         </div>
