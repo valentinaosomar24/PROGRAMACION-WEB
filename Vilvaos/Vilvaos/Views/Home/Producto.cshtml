@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Producto";
     if (Session["User"] == null)
     {
@@ -29,6 +28,7 @@
         </div>
     </div>
 
+    <!-- Tabla de productos -->
     <div class="tablaProductos">
         <table class="table table-striped table-container table-responsive" id="myTableProducts">
             <thead>
@@ -42,19 +42,62 @@
                     <th scope="col">Opcion</th>
                 </tr>
             </thead>
-            <tbody id="TablaBodyProduct">
-            </tbody>
+            <tbody id="TablaBodyProduct"></tbody>
         </table>
     </div>
 
-    <div class="GraficoProductos" id="GraficoProductos">
+    <!-- Gráfico y cuadro de información -->
+    <div class="containerEstadistica">
+        <!-- Sección para el gráfico -->
+        <div class="GraficoProductos" id="GraficoProductos" style="display: none;">
+            <div class="grafico-container" style="max-width: 100%; height: 400px;">
+                <canvas id="GraficoPie" style="width: 100%; height: 100%;"></canvas>
+            </div>
+        </div>
+
+        <!-- Contenedor de las tablas -->
+        <div class="tabla-contenedor">
+            <div id="detalles-producto-top-mas-ganancias" class="detalles-contenedor">
+                <div id="tabla2">
+                    <h3 id="tituloProductosGanancias">Top 5 productos con mayores ganancias</h3>
+                    <div id="detallesProductosGanancias" class="tabla-productos">
+                        <!-- Aquí se generará dinámicamente el top 5 de productos con mayores ganancias -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="detalles-producto-top-menor-ganancias" class="detalles-contenedor">
+                <div id="tabla2">
+                    <h3 id="tituloProductosMenorGanancias">Top 5 productos con menores ganancias</h3>
+                    <div id="detallesProductosMenorGanancias" class="tabla-productos">
+                        <!-- Aquí se generará dinámicamente el top 5 de productos con mayores ganancias -->
+                    </div>
+                </div>
+            </div><div id="detalles" class="detalles-contenedor">
+                <div id="tabla1">
+                    <h3 id="tituloProductos">1) Seleccione la sección de la gráfica de la que desea saber mayor información</h3>
+                    <div id="detallesProductos" class="tabla-productos">
+                        <!-- Aquí se generarán los productos dinámicamente -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla con los productos seleccionados por el gráfico -->
+            <!-- Producto con proveedor -->
+            <div id="detalles-producto-proveedor" class="detalles-contenedor">
+                <div id="tabla2">
+                    <h3 id="tituloProductosProv">2) Seleccione un elemento de la tabla del que desea saber mayor información</h3>
+                    <div id="detallesProductoProv" class="tabla-productos">
+                        <!-- Aquí se generarán los detalles del producto dinámicamente -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="~/Scripts/Script/producto.js"></script>
-
-
-
-
-
-

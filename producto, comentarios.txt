@@ -1,0 +1,401 @@
+﻿var global;
+var bajoStock = [];
+var medioStock = [];
+var altoStock = [];
+$(document).ready(function () {
+    document.getElementById("loader-container").style.display = "flex";
+    $.ajax({
+        type: 'POST',
+        url: "ConsultarProductos",
+        contentType: "application/json;charset=utf-8",
+        datatype: "json",
+        success: function (jsondata, stat) {
+            var datos = JSON.parse(jsondata);
+            global = datos;
+            var tabla = document.getElementById("TablaBodyProduct");
+            tabla.innerHTML = "";
+            var contenidoTabla = ""; // Variable para acumular el contenido
+            var bg = "";
+            var dato1 = 0;
+            var dato2 = 0;
+            var dato3 = 0;
+            for (var i = 0; i < datos.length; i++) {
+                if (datos[i].Cantidad <= 10) {
+                    bg = "class= 'table-danger'";
+                    dato1++;;
+                    bajoStock.push(datos[i]);
+                } else if (datos[i].Cantidad <= 30) {
+                    bg = "class= 'table-warning'";
+                    dato2++;
+                    medioStock.push(datos[i]);
+                } else if (datos[i].Cantidad > 30) {
+                    bg = "class= 'table-success'";
+                    dato3++;
+                    altoStock.push(datos[i]);
+                }
+                contenidoTabla += "<tr " + bg + ">" +
+                    "<th scope='row'>" + datos[i].IdProducto + "</th>" +
+                    "<td>" + datos[i].Producto + "</td>" +
+                    "<td>" + datos[i].Cantidad + "</td>" +
+                    "<td>$" + datos[i].PrecioCompra + "</td>" +
+                    "<td>" + datos[i].PrecioVenta + "</td>" +
+                    "<td>" + datos[i].Proveedor + "</td>" +
+                    "<td>" +
+                    "<button class='btnTablaP btn btn-info' onclick='redirectToAction(" + 2 + "," + datos[i].IdProducto + ")'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></button>" +
+                    "<button class='btnTablaP btn btn-danger' onclick='EliminarProducto(" + datos[i].IdProducto + ")'><i class='fa fa-trash-o' aria-hidden='true'></i></button>" +
+                    "</td>" +
+                    "</tr>";
+            }
+            tabla.innerHTML = contenidoTabla;
+
+            ManejaFunciones(dato1, dato2, dato3);
+            document.getElementById("loader-container").style.display = "none";
+        },
+        error: function (xhr, status) {
+            alert("Error: " + xhr + "-" + status);
+            document.getElementById("loader-container").style.display = "none";
+        },
+    });
+});
+
+/*
+function ManejaFunciones(dato1, dato2, dato3)
+{
+    $('#myTableProducts').DataTable({
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay información",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+            "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+            "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Entradas",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "Sin resultados encontrados",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        }
+    });
+    document.querySelector('.GraficoProductos').style.display = 'none';
+    document.querySelector('.tablaProductos').style.display = 'block';
+    document.querySelector('.btnAgregarProductodiv').style.display = 'block';
+    var Grafico = document.getElementById("GraficoProductos");
+    $('input[type="radio"][name="options"]').change(function () {
+        if ($('#opcTablaP').is(':checked')) {
+            Grafico.innerHTML = "";
+            document.querySelector('.GraficoProductos').style.display = 'none';
+            document.querySelector('.tablaProductos').style.display = 'block';
+            document.querySelector('.btnAgregarProductodiv').style.display = 'block';
+        } else {
+            Grafico.innerHTML = "<div class='GraficoProductos' id='GraficoProductos'><div class='d-flex flex-wrap justify-content-center flex-lg-nowrap'><div class='grafico-container' style='max-width: 100%; height: 400px;'><canvas id='Grafico1' style='width: 100%; height: 100%;'></canvas></div><div class='grafico-container' style='max-width: 100%; height: 300px;'><canvas id='Grafico2' style='width: 100%; height: 100%;'></canvas></div></div></div>";
+            document.querySelector('.tablaProductos').style.display = 'none';
+            document.querySelector('.GraficoProductos').style.display = 'block';
+            document.querySelector('.btnAgregarProductodiv').style.display = 'none';
+            var data = {
+                labels: ['Menos de 10', 'Menos de 30', 'Mas de 30'],
+                datasets: [{
+                    data: [dato1, dato2, dato3], // Porcentajes
+                    backgroundColor: ['#f5c6cb', '#ffeeba', '#c3e6cb']
+                }]
+            };
+
+            // Opciones del gráfico
+            var options1 = {
+                indexAxis: 'x', // Cambiar el eje a vertical
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100, // Máximo porcentaje
+                            title: {
+                                display: true,
+                                text: 'Porcentaje'
+                            }
+                        }
+                    }
+                }
+            };
+
+            var options2 = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            };
+
+            // Crear el gráfico de barras
+            var ctx1 = document.getElementById('Grafico1').getContext('2d');
+            var myBarChart = new Chart(ctx1, {
+                type: 'bar',
+                data: data,
+                options: options1
+            });
+
+            var ctx2 = document.getElementById('Grafico2').getContext('2d');
+            var myPieChart = new Chart(ctx2, {
+                type: 'pie',
+                data: data,
+                options: options2
+            });
+        }
+    });
+}
+*/
+function ManejaFunciones(dato1, dato2, dato3) {
+    // Configurar DataTable
+    $('#myTableProducts').DataTable({
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay información",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+            "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+            "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Entradas",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "Sin resultados encontrados",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        }
+    });
+
+    // Ocultar gráfico por defecto y mostrar tabla
+    document.querySelector('.GraficoProductos').style.display = 'none';
+    document.querySelector('.tablaProductos').style.display = 'block';
+    document.querySelector('.btnAgregarProductodiv').style.display = 'block';
+
+    // Referencia al contenedor de gráficos
+    var Grafico = document.getElementById("GraficoProductos");
+    var detallesDiv = document.getElementById("productoDetalles1");
+    // Función para mostrar detalles al pasar el mouse
+    /*
+    function mostrarDetallesProductos(label) {
+        var productos;
+        if (label === 'Menos de 10') {
+            productos = bajoStock;  // Productos con menos de 10 unidades
+        } else if (label === 'Menos de 30') {
+            productos = medioStock; // Productos con menos de 30 unidades
+        } else if (label === 'Más de 30') {
+            productos = altoStock;  // Productos con más de 30 unidades
+        }
+        detallesDiv.innerHTML = "";
+        // Crear las filas de productos
+        productos.forEach(function (prod) {
+            // Crear un div para cada producto
+            var productoDiv = document.createElement('div');
+            productoDiv.className = 'productoFila'; // Usar la clase CSS que creamos
+            productoDiv.innerHTML = "<span>" + prod.Producto + ": " + prod.Cantidad + "</span>"; // Ajustar según tus propiedades
+
+            // Añadir el div al contenedor
+            detallesDiv.appendChild(productoDiv);
+        });/*
+        var listaProductos = productos.map(function (prod) {
+            return prod.Producto; // Cambia a la propiedad que contiene el nombre del producto
+        });
+        
+        detallesDiv.innerHTML = "Productos en la categoría " + label + ": " + listaProductos.join(', ');
+       
+  
+        var mensaje = "Productos en la categoría " + label + ": " + listaProductos.join(', ');*/
+        //alert(mensaje); // Aquí podrías usar una tarjeta flotante en vez del alert si prefieres
+    //}
+    // Función para mostrar los detalles del producto
+   function mostrarDetallesProductos(label) {
+        var productos;
+        var tituloProductos = document.getElementById('tituloProductos');
+        var detallesDiv = document.getElementById('detallesProductos');
+
+        if (label === 'Menos de 10') {
+            productos = bajoStock;  // Productos con menos de 10 unidades
+            tituloProductos.style.backgroundColor = '#FF4C4C';  // Color rojo para menos de 10
+            tituloProductos.innerText = 'Productos con cantidad menor a 10';
+        } else if (label === 'Menos de 30') {
+            productos = medioStock; // Productos con menos de 30 unidades
+            tituloProductos.style.backgroundColor = '#FFD700';  // Color amarillo para menos de 30
+            tituloProductos.innerText = 'Productos con cantidad menor a 30';
+        } else if (label === 'Más de 30') {
+            productos = altoStock;  // Productos con más de 30 unidades
+            tituloProductos.style.backgroundColor = '#32CD32';  // Color verde para más de 30
+            tituloProductos.innerText = 'Productos con cantidad mayor a 30';
+        } else {
+            tituloProductos.innerText = 'Seleccione la sección de la gráfica de la que desea saber mayor información';
+            detallesDiv.innerHTML = "";  // Limpiar el contenido si no hay selección
+            return;
+        }
+
+        // Limpiar el contenido anterior
+        detallesDiv.innerHTML = "";
+
+        // Crear el encabezado de la tabla
+        var encabezado = document.createElement('div');
+        encabezado.className = 'encabezado';
+        encabezado.innerHTML = "<div>Producto</div><div>Cantidad</div>";
+        detallesDiv.appendChild(encabezado);
+
+        // Crear las filas de productos
+        productos.forEach(function (prod) {
+            var fila = document.createElement('div');
+            fila.className = 'productoFila';
+            fila.innerHTML = "<div>" + prod.Producto + "</div><div>" + prod.Cantidad + "</div>";
+            detallesDiv.appendChild(fila);
+        });
+    }
+
+
+
+    // Manejo del cambio entre tabla y gráfico
+    $('input[type="radio"][name="options"]').change(function () {
+        if ($('#opcTablaP').is(':checked')) {
+            // Mostrar la tabla, ocultar el gráfico
+            Grafico.innerHTML = "";
+            document.querySelector('.GraficoProductos').style.display = 'none';
+            document.querySelector('.productoDetalles').style.display = 'none';
+            document.querySelector('.GraficoProductos').style.display = 'none';
+            document.querySelector('.tablaProductos').style.display = 'block';
+            document.querySelector('.btnAgregarProductodiv').style.display = 'block';
+        } else {
+            // Mostrar gráfico, ocultar la tabla
+            Grafico.innerHTML =
+                "<div class='containerEstadistica d-flex justify-content-between align-items-center'>" +
+                "<div class='GraficoProductos' style='max-width: 100%; height: 400px;'>" +
+                "<div class='grafico-container' style='max-width: 100%; height: 100%;'>" +
+                "<canvas id='Grafico2' style='width: 100%; height: 100%;'></canvas>" +
+                "</div>" +
+                "</div>";
+
+
+
+            document.querySelector('.tablaProductos').style.display = 'none';
+            document.querySelector('.GraficoProductos').style.display = 'block';
+            
+            document.querySelector('.btnAgregarProductodiv').style.display = 'none';
+
+            // Datos para los gráficos
+            var data = {
+                labels: ['Menos de 10', 'Menos de 30', 'Más de 30'],
+                datasets: [{
+                    data: [dato1, dato2, dato3], // Valores para los gráficos
+                    backgroundColor: ['#f5c6cb', '#ffeeba', '#c3e6cb'] // Colores de las barras y la torta
+                }]
+            };
+
+
+            // Opciones del gráfico de torta
+            var options2 = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            };
+
+
+
+            // Crear gráfico de torta
+            var ctx2 = document.getElementById('Grafico2').getContext('2d');
+            var myPieChart = new Chart(ctx2, {
+                type: 'pie',
+                data: data,
+                options: options2
+            });
+
+            // Evento 'click' en la gráfica de torta para filtrar productos por color
+            ctx2.canvas.onclick = function (evt) {
+                var activePoints = myPieChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+                if (activePoints.length) {
+                    var index = activePoints[0].index;
+                    var label = data.labels[index];
+                    mostrarDetallesProductos(label); // Muestra la lista de productos en esa categoría
+                }
+            };
+        }
+    });
+}
+
+function downloadExcel() {
+    var table = document.getElementById('myTableProducts');
+
+    // Obtener las filas y las celdas, excluyendo la última columna
+    var rows = table.rows;
+    for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].cells;
+        for (var j = 0; j < cells.length - 1; j++) {
+            cells[j].classList.add("exclude-excel"); // Marcar las celdas de la última columna
+        }
+    }
+
+    var wb = XLSX.utils.table_to_book(table);
+    var wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'binary' });
+
+    // Eliminar la marca de las celdas excluidas
+    var excludedCells = document.querySelectorAll('.exclude-excel');
+    for (var k = 0; k < excludedCells.length; k++) {
+        excludedCells[k].classList.remove("exclude-excel");
+    }
+
+    function s2ab(s) {
+        var buf = new ArrayBuffer(s.length);
+        var view = new Uint8Array(buf);
+        for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+        return buf;
+    }
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    var currentDate = dd + '-' + mm + '-' + yyyy;
+
+    saveAs(new Blob([s2ab(wbout)], { type: 'application/octet-stream' }), 'Productos_' + currentDate + '.xlsx');
+}
+
+function redirectToAction(Op, id) {
+    var url = '/Home/Agregar_ActualizarProducto?Op=' + Op + '&id=' + id;
+    window.location.href = url;
+}
+
+function EliminarProducto(id) {
+    var opcion = confirm("¿Esta seguro de ELIMINAR este producto?");
+    if (opcion == true) {
+        var data = "{'Id':'" + id + "'}"
+        $.ajax({
+            type: 'POST',
+            url: 'EliminarProducto',
+            contentType: "application/json;charset=utf-8",
+            datatype: "json",
+            data: data,
+            success: function (jsondata, stat) {
+                var datos = JSON.parse(jsondata);
+                alert(datos);
+                window.location.href = "Producto";
+            },
+            error: function (error) {
+                alert('Error al eliminar:', error);
+                window.location.href = "Producto";
+            }
+        });
+    }
+}
