@@ -31,6 +31,7 @@ namespace Vilvaos.Models
 
         public string Registrar(string Nombre, string correo, string contraseña)
         {
+            string verificationCode = Guid.NewGuid().ToString().Substring(0, 8);
             DataTable result = new DataTable();
             try
             {

@@ -215,6 +215,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Styles\cliente.css" />
     <Content Include="Content\Styles\Index.css" />
+    <Content Include="Content\Styles\IndexLog.css" />
     <Content Include="Content\Styles\login.css" />
     <Content Include="Content\Styles\Memoriza.css" />
     <Content Include="Content\Styles\producto.css" />
@@ -229,6 +230,7 @@
     <Content Include="img\imgCarrusel1.png" />
     <Content Include="img\imgCarrusel2.png" />
     <Content Include="img\imgCarrusel3.png" />
+    <Content Include="img\Inventarios.jpg" />
     <Content Include="img\loader.gif" />
     <Content Include="img\Memoriza\cliente1.jpg" />
     <Content Include="img\Memoriza\cliente2.jpg" />
@@ -263,6 +265,7 @@
     <Content Include="Scripts\Script\AgregarActualizarProveedor.js" />
     <Content Include="Scripts\Script\cliente.js" />
     <Content Include="Scripts\Script\Index.js" />
+    <Content Include="Scripts\Script\IndexLog.js" />
     <Content Include="Scripts\Script\login.js" />
     <Content Include="Scripts\Script\Memoriza.js" />
     <Content Include="Scripts\Script\producto.js" />
@@ -287,6 +290,7 @@
     <Content Include="Views\Home\Agregar_ActualizarCliente.cshtml" />
     <Content Include="Views\Home\Agregar_ActualizarProveedor.cshtml" />
     <Content Include="Views\Home\Memoriza.cshtml" />
+    <Content Include="Views\Home\IndexLog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

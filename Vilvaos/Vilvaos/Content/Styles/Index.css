@@ -8,7 +8,7 @@ body {
 }
 
 .jumbotron {
-    background-image: url('https://blog.gieicom.com/hubfs/control_de_inventarios-1.png');
+    background-image: url('../../img/Inventarios.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -18,6 +18,8 @@ body {
 }
 
 .animacion-text {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
     text-align: center;
     animation: cambioTexto 5s infinite;
 }
@@ -140,7 +142,7 @@ body {
     }
 
         .popup .logoinfo {
-            color: #FF9700;
+            color: #18888C;
             font-size: 20rem;
         }
 

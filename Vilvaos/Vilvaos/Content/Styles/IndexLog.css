@@ -1,0 +1,140 @@
+﻿.NombreEmpresa {
+    font-size: 4rem;
+}
+
+#infoUser {
+    border-radius: 15px;
+    background-color: #005792;
+    box-shadow: 0px 3px 6px #b5b5b5;
+    color: #fff;
+}
+
+#userInfo {
+    font-size: 1.4em;
+}
+
+#fotoUser .foto {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.foto img {
+    width: -webkit-fill-available;
+}
+
+/* Sección de Módulos */
+#modulos .modulo {
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #2c3e50;
+}
+
+.moduloP {
+    margin: 10px 0 10px 0;
+}
+
+#modulos .modulo:hover {
+    background-color: #18888c50;
+}
+
+.modulo h2, .Continuar a{
+    color: #153E50;
+}
+
+.modulo p {
+    font-size: 1.3rem;
+}
+
+.Continuar a{
+    text-decoration: none;
+}
+
+.Continuar{
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.Continuar:hover {
+    font-size: 2.2rem;
+}
+
+
+
+/* Sección de Notificaciones */
+#notificaciones {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Contenedor de la lista de notificaciones */
+#notificacionesList {
+    overflow-x: auto;
+    display: flex;
+    gap: 10px; /* Espacio entre notificaciones */
+    padding: 10px;
+}
+
+.btnEditarPerfil {
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    transition: 2s ease;
+}
+
+.btnEditarPerfil:hover{
+    background-color: #fff;
+}
+
+/* Estilo de notificaciones */
+.notificacion {
+    background-color: #f1f1f1;
+    min-width: 220px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.notificacion i{
+    font-size: 6rem;
+}
+
+    /* Efecto al pasar el cursor */
+    .notificacion:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.05);
+    }
+
+    /* Estilos específicos para alertas de peligro */
+    .notificacion.alerta-peligro i{
+        color:red;
+    }
+
+    /* Estilos específicos para alertas de advertencia */
+    .notificacion.alerta-advertencia i {
+        color: #ffc800;
+    }
+
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    #userInfo {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    #fotoUser {
+        text-align: center;
+    }
+}
