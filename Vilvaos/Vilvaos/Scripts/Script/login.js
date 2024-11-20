@@ -32,7 +32,7 @@ function IniciarSesion(ambiente)
                 if (datos != "OK") {
                     alert(datos);
                 } else {
-                    window.location.href = "Index";
+                    window.location.href = "IndexLog";
                 }
             }
         });

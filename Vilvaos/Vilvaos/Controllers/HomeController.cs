@@ -23,6 +23,11 @@ namespace Vilvaos.Controllers
         Proveedor proveedor = new Proveedor();
         Empresa empresa = new Empresa();
 
+        public  HomeController()
+        {
+            ViewData["Barra"] = "false";
+        }
+
         #region cuenta
         [WebMethod(EnableSession = true)]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
@@ -70,6 +75,10 @@ namespace Vilvaos.Controllers
         #region Index
         public ActionResult Index()
         {
+            if (Session["User"] != null)
+            {
+                ViewData["Barra"] = "true";
+            }
             return View();
         }
 
@@ -107,9 +116,18 @@ namespace Vilvaos.Controllers
 
         #endregion
 
+        #region
+        public ActionResult IndexLog()
+        {
+            return View();
+        }
+
+        #endregion
+
         #region Productos
         public ActionResult Producto() 
         {
+            ViewData["Barra"] = "true";
             return View();
         }
 
@@ -183,6 +201,7 @@ namespace Vilvaos.Controllers
         #region cliente
         public ActionResult Cliente() 
         {
+            ViewData["Barra"] = "true";
             return View();
         }
 
@@ -256,6 +275,7 @@ namespace Vilvaos.Controllers
 
         public ActionResult Proveedor() 
         {
+            ViewData["Barra"] = "true";
             return View();
         }
 
